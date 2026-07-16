@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ghafek-portfolio.vercel.app"),
+  metadataBase: new URL("https://www.ghafek.xyz"),
   title: "Ghafek Alsaho | Portfolio",
   description:
     "Computer Science student at TU Berlin and working student in tech, focused on software engineering, automation, cloud systems, and AI/ML.",
@@ -34,10 +34,10 @@ export const metadata: Metadata = {
     description:
       "Computer Science student and software developer interested in backend systems, cloud deployments, automation, and AI/ML.",
     type: "website",
-    url: "https://ghafek-portfolio.vercel.app",
+    url: "https://www.ghafek.xyz",
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Ghafek Alsaho | Portfolio",
     description:
       "Computer Science student and software developer focused on practical systems and modern cloud-native tooling.",
