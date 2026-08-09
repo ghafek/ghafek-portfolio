@@ -360,9 +360,6 @@ export default function Home() {
 
       <footer className="mt-16 border-t border-neutral-300 pt-6 text-sm dark:border-neutral-700">
         <div className="flex flex-wrap gap-x-6 gap-y-2">
-          <Link className="underline" href="/impressum">
-            Impressum
-          </Link>
           <Link className="underline" href="/datenschutz">
             Datenschutz
           </Link>
