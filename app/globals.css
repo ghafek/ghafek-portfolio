@@ -35,8 +35,8 @@ h6 {
   font-family: "Iowan Old Style", "Palatino Linotype", Palladio, serif;
 }
 
-/* The blog zone keeps its own typography: Bitter (slab serif) with
-   Noto Naskh Arabic as fallback for the Arabic section. */
+/* The blog zone keeps its own typography: Bitter (slab serif) for the Latin
+   sections, Noto Naskh Arabic for the Arabic one. */
 .blog-zone,
 .blog-zone h1,
 .blog-zone h2,
@@ -45,4 +45,18 @@ h6 {
 .blog-zone h5,
 .blog-zone h6 {
   font-family: var(--font-blog), var(--font-blog-arabic), serif;
+}
+
+/* Arabic must come first in the RTL section. next/font expands --font-blog to
+   "Bitter, Bitter Fallback", and that fallback is local(Times New Roman),
+   which carries Arabic glyphs — so listing it first meant the cascade never
+   reached Noto Naskh Arabic at all. */
+.blog-zone[dir="rtl"],
+.blog-zone[dir="rtl"] h1,
+.blog-zone[dir="rtl"] h2,
+.blog-zone[dir="rtl"] h3,
+.blog-zone[dir="rtl"] h4,
+.blog-zone[dir="rtl"] h5,
+.blog-zone[dir="rtl"] h6 {
+  font-family: var(--font-blog-arabic), var(--font-blog), serif;
 }

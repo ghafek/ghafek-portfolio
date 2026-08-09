@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 // IDs generated at https://giscus.app for the public ghafek-portfolio repo
@@ -14,21 +15,25 @@ const giscusConfig = {
 
 const isConfigured = Boolean(giscusConfig.repoId && giscusConfig.categoryId);
 
-// giscus is loaded only after an explicit click. Injecting it on mount would
-// contact giscus.app and GitHub — transmitting the visitor IP and writing
-// giscus-session to localStorage — before the visitor has any say.
+// giscus is loaded only after an explicit click, and unloading removes the
+// iframe and the session entry giscus writes after a GitHub sign-in — so
+// withdrawing consent is as easy as giving it (Art. 7(3) GDPR).
 export default function GiscusComments({
   lang,
   heading,
   notice,
   loadLabel,
+  unloadLabel,
   gitHubLabel,
+  privacyLabel,
 }: {
   lang: string;
   heading: string;
   notice: string;
   loadLabel: string;
+  unloadLabel: string;
   gitHubLabel: string;
+  privacyLabel: string;
 }) {
   const [accepted, setAccepted] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -55,13 +60,34 @@ export default function GiscusComments({
     container.appendChild(script);
   }, [accepted, lang]);
 
+  function withdraw() {
+    if (containerRef.current) {
+      containerRef.current.replaceChildren();
+    }
+    try {
+      localStorage.removeItem("giscus-session");
+    } catch {
+      // Storage unavailable; nothing to clear.
+    }
+    setAccepted(false);
+  }
+
   if (!isConfigured) return null;
 
   return (
     <section className="space-y-4">
       <h2 className="text-xl font-semibold">{heading}</h2>
       {accepted ? (
-        <div ref={containerRef} />
+        <div className="space-y-4">
+          <div ref={containerRef} />
+          <button
+            type="button"
+            onClick={withdraw}
+            className="rounded border border-neutral-400 px-3 py-1.5 text-sm hover:bg-neutral-100 dark:border-neutral-600 dark:hover:bg-neutral-900"
+          >
+            {unloadLabel}
+          </button>
+        </div>
       ) : (
         <div className="space-y-3">
           <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
@@ -74,7 +100,7 @@ export default function GiscusComments({
           >
             {loadLabel}
           </button>
-          <p className="text-sm">
+          <p className="space-x-3 text-sm">
             <a
               className="underline"
               href={giscusConfig.discussionsUrl}
@@ -83,6 +109,9 @@ export default function GiscusComments({
             >
               {gitHubLabel}
             </a>
+            <Link className="underline" href="/datenschutz">
+              {privacyLabel}
+            </Link>
           </p>
         </div>
       )}

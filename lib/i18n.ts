@@ -35,7 +35,9 @@ export const ui: Record<
     blogTitle: string;
     commentsNotice: string;
     commentsLoad: string;
+    commentsUnload: string;
     commentsGitHub: string;
+    commentsPrivacy: string;
   }
 > = {
   en: {
@@ -56,9 +58,11 @@ export const ui: Record<
     comments: "Comments",
     blogTitle: "Blog",
     commentsNotice:
-      "Comments are provided by giscus and stored as GitHub Discussions. Loading them contacts giscus.app and GitHub, which transmits your IP address to those services and may store data in your browser. Nothing is loaded until you choose to.",
+      "Comments are provided by giscus and stored as GitHub Discussions. Loading them contacts giscus.app and GitHub, which transmits your IP address to those services and may store data in your browser. Nothing is loaded until you choose to, and you can withdraw your consent at any time using the button that replaces this one.",
     commentsLoad: "Load comments",
+    commentsUnload: "Unload comments and withdraw consent",
     commentsGitHub: "or open the discussions on GitHub",
+    commentsPrivacy: "privacy policy",
   },
   de: {
     tagline: "Notizen zu Backend-Entwicklung, Infrastruktur und Studium.",
@@ -78,9 +82,11 @@ export const ui: Record<
     comments: "Kommentare",
     blogTitle: "Blog",
     commentsNotice:
-      "Die Kommentare werden über giscus bereitgestellt und als GitHub Discussions gespeichert. Beim Laden wird eine Verbindung zu giscus.app und GitHub hergestellt; dabei wird Ihre IP-Adresse an diese Dienste übertragen und es können Daten in Ihrem Browser gespeichert werden. Vorher wird nichts geladen.",
+      "Die Kommentare werden über giscus bereitgestellt und als GitHub Discussions gespeichert. Beim Laden wird eine Verbindung zu giscus.app und GitHub hergestellt; dabei wird Ihre IP-Adresse an diese Dienste übertragen und es können Daten in Ihrem Browser gespeichert werden. Vorher wird nichts geladen. Sie können Ihre Einwilligung jederzeit über die Schaltfläche widerrufen, die anschließend an dieser Stelle erscheint.",
     commentsLoad: "Kommentare laden",
+    commentsUnload: "Kommentare entladen und Einwilligung widerrufen",
     commentsGitHub: "oder die Diskussionen auf GitHub öffnen",
+    commentsPrivacy: "Datenschutzerklärung",
   },
   ar: {
     tagline: "ملاحظات عن هندسة البرمجيات والبنية التحتية والدراسة.",
@@ -100,8 +106,10 @@ export const ui: Record<
     comments: "التعليقات",
     blogTitle: "المدونة",
     commentsNotice:
-      "يتم توفير التعليقات عبر giscus وتُحفظ في GitHub Discussions. عند التحميل يتم الاتصال بـ giscus.app وGitHub، ويُرسل عنوان IP الخاص بك إلى هاتين الخدمتين، وقد تُخزَّن بيانات في متصفحك. لا يتم تحميل أي شيء قبل ذلك.",
+      "يتم توفير التعليقات عبر giscus وتُحفظ في GitHub Discussions. عند التحميل يتم الاتصال بـ giscus.app وGitHub، ويُرسل عنوان IP الخاص بك إلى هاتين الخدمتين، وقد تُخزَّن بيانات في متصفحك. لا يتم تحميل أي شيء قبل ذلك، ويمكنك سحب موافقتك في أي وقت عبر الزر الذي يظهر مكان هذا الزر بعد التحميل.",
     commentsLoad: "تحميل التعليقات",
+    commentsUnload: "إلغاء تحميل التعليقات وسحب الموافقة",
     commentsGitHub: "أو افتح النقاشات على GitHub",
+    commentsPrivacy: "سياسة الخصوصية",
   },
 };

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // Counts page loads. Nothing is written to the visitor's device: an earlier
 // sessionStorage marker was dropped because storing it would need consent
@@ -16,8 +16,15 @@ export default function ViewCounter({
   label: string;
 }) {
   const [views, setViews] = useState<number | null>(null);
+  // Strict Mode replays effects in development; without this the same post
+  // would be counted twice per mount there.
+  const countedRef = useRef<string | null>(null);
 
   useEffect(() => {
+    const key = `${lang}/${slug}`;
+    if (countedRef.current === key) return;
+    countedRef.current = key;
+
     let cancelled = false;
 
     fetch(`/api/views/${lang}/${slug}`, { method: "POST" })

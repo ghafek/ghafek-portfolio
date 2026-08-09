@@ -124,7 +124,9 @@ export default async function BlogPostPage({ params }: Props) {
           heading={t.comments}
           notice={t.commentsNotice}
           loadLabel={t.commentsLoad}
+          unloadLabel={t.commentsUnload}
           gitHubLabel={t.commentsGitHub}
+          privacyLabel={t.commentsPrivacy}
         />
       </div>
     </main>

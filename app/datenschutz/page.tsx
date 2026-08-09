@@ -24,7 +24,7 @@ const sections: Section[] = [
     paragraphs: [
       "This website is hosted by Vercel Inc., USA. When the site is accessed, Vercel processes technically necessary data, in particular the IP address of the requesting device.",
       "The legal basis is Art. 6(1)(f) GDPR. The legitimate interest lies in providing the website securely, reliably and efficiently. Processing takes place on the basis of Vercel's privacy and contractual terms. Insofar as Vercel acts as a processor and a data processing agreement is required and available, processing takes place on that basis.",
-      "As Vercel is based in the USA, personal data may be transferred to a third country. Vercel Inc. is certified under the EU-U.S. Data Privacy Framework; transfers take place on that basis, supplemented by the EU Standard Contractual Clauses. The current certification status can be checked in the list at dataprivacyframework.gov.",
+      "As Vercel is based in the USA, personal data may be transferred to a third country. Vercel Inc. is certified under the EU-U.S. Data Privacy Framework, and transfers take place on that basis. Should the framework cease to apply to the transfer, Vercel's contractual terms provide for the EU Standard Contractual Clauses as a fallback. The current certification status can be checked in the list at dataprivacyframework.gov.",
     ],
   },
   {
@@ -38,7 +38,7 @@ const sections: Section[] = [
   {
     heading: "4. Cookies",
     paragraphs: [
-      "This website sets no cookies of its own and uses no cookies for analytics, marketing or recognition purposes. Simply visiting the pages neither stores information on your device nor reads information from it.",
+      "This website sets no cookies of its own and uses no cookies for analytics, marketing or recognition purposes. None of the features used on these pages store information in your browser storage or read information already stored there.",
       "Only if you explicitly load the comment function by clicking may giscus and GitHub create entries in your browser storage and set cookies, in particular if you are signed in to GitHub. Details are set out in section 8. The controller has no influence over that processing.",
     ],
   },
@@ -46,15 +46,16 @@ const sections: Section[] = [
     heading: "5. Vercel Web Analytics",
     paragraphs: [
       "This website uses Vercel Web Analytics to measure reach. The service works without cookies and without cross-device recognition.",
-      "The data processed includes in particular the URL or path requested, the referring page, filtered URL parameters, the country of origin, information about browser, device type and operating system, and timestamps. To distinguish visits, Vercel derives a hash value from request data which is discarded after 24 hours. IP addresses are not stored.",
+      "The data processed includes in particular the URL or path requested, the referring page, filtered URL parameters, approximate location derived from the request (country, region and city), information about browser, device type and operating system, and timestamps. To distinguish visits, Vercel derives a hash value from request data which is discarded after 24 hours. IP addresses are not stored.",
       "No profiles of individual visitors are created and no data is passed to advertising networks. The legal basis is Art. 6(1)(f) GDPR; the legitimate interest lies in a data-minimising statistical evaluation of how the website is used.",
+      "The statistics are evaluated in aggregate form only. How long they remain available is determined by the retention window of the analytics plan in use; the controller keeps no separate copy and carries out no evaluation beyond that period.",
     ],
   },
   {
     heading: "6. Vercel Speed Insights",
     paragraphs: [
       "Vercel Speed Insights is used to measure technical performance. It records metrics on loading speed and rendering quality (Core Web Vitals), together with the URL and route requested, information on connection speed, browser, device type and operating system, the country of origin, information on the page element that triggered the measurement, information about the SDK used, and timestamps. This service also works without cookies and without profiling; no attribution to individual persons takes place.",
-      "The legal basis is Art. 6(1)(f) GDPR; the legitimate interest lies in the technical optimisation of the website.",
+      "The legal basis is Art. 6(1)(f) GDPR; the legitimate interest lies in the technical optimisation of the website. How long the measurements remain available is determined by the retention window of the plan in use; the controller keeps no separate copy.",
     ],
   },
   {
@@ -62,7 +63,7 @@ const sections: Section[] = [
     paragraphs: [
       "Where a view count is displayed on blog posts, only a single number per post is stored in a Redis database operated by Upstash, Inc. (USA). No IP addresses, no identifiers and no other personal data are stored.",
       "No information is stored on your device or read from it. Page loads are counted rather than individual people, so the figure shown is only an approximation.",
-      "The counter value itself contains no personal data and is stored permanently. Upstash, Inc. is certified under the EU-U.S. Data Privacy Framework; insofar as personal data is transferred to the USA in operating the database, this takes place on that basis, supplemented by the EU Standard Contractual Clauses.",
+      "The counter value itself contains no personal data and is stored permanently. Upstash, Inc. is certified under the EU-U.S. Data Privacy Framework; insofar as personal data is transferred to the USA in operating the database, this takes place on that basis. Under Upstash's data processing agreement the EU Standard Contractual Clauses apply as a fallback should the framework not cover the transfer or cease to apply.",
       "The legal basis for storing the counter value is Art. 6(1)(f) GDPR.",
     ],
   },
@@ -71,10 +72,10 @@ const sections: Section[] = [
     paragraphs: [
       "Where the giscus comment function is embedded below blog posts, comments are not stored on this website but as GitHub Discussions in the associated public repository. The provider is GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA, a company of Microsoft Corporation.",
       "The comment function is not loaded automatically. Initially only a notice and a button are shown below the post. The script from giscus.app is loaded, and a connection to giscus.app and GitHub established, only once you actively click that button. Your IP address is transmitted to those providers in the process.",
-      "After loading, giscus stores an entry for session management in your browser's local storage; once you sign in to GitHub, a session identifier is stored there as well. This storage takes place solely on the basis of your prior consent under Sec. 25(1) TDDDG. You may leave the comment function unused at any time; without a click, no data is transmitted to giscus or GitHub.",
+      "After loading, giscus reads your browser's local storage to check for an existing session entry. An entry is written there only once you sign in to GitHub, in the form of a session token; if you simply read the comments without signing in, nothing is stored. Any such access takes place solely on the basis of your prior consent under Sec. 25(1) TDDDG. Without a click, no data is transmitted to giscus or GitHub at all.",
       "A GitHub account and sign-in are required in order to post a comment. GitHub's privacy terms apply in that respect. Published comments are publicly visible and linked to the GitHub username. Retention is governed by GitHub's provisions; comments generally remain stored until they are deleted.",
-      "GitHub, Inc. is certified under the EU-U.S. Data Privacy Framework; transfers of personal data to the USA take place on that basis, supplemented by the EU Standard Contractual Clauses.",
-      "The legal basis for loading the comment function, and for the associated storage in your browser, is your consent under Art. 6(1)(a) GDPR in conjunction with Sec. 25(1) TDDDG. You may withdraw that consent at any time with effect for the future by no longer loading the comment function and deleting the entries set by giscus in your browser settings.",
+      "GitHub, Inc. is certified under the EU-U.S. Data Privacy Framework, and transfers of personal data to the USA take place on that basis. For transfers not covered by the framework, GitHub states that it relies on the EU Standard Contractual Clauses.",
+      "The legal basis for loading the comment function, and for the associated access to your browser storage, is your consent under Art. 6(1)(a) GDPR in conjunction with Sec. 25(1) TDDDG. You may withdraw that consent at any time with effect for the future using the button shown beneath the loaded comments; this removes the comment function from the page again and deletes the session entry set by giscus. Comments already published on GitHub are not affected and can be deleted through your GitHub account.",
       "Further information is available in GitHub's privacy statement and in the information published by the giscus project.",
     ],
   },
