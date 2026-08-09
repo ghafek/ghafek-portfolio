@@ -8,7 +8,6 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,8 +17,32 @@
   }
 }
 
+/* System font stacks matching the reference site: Optima and Iowan Old Style
+   on macOS, with equivalent fallbacks on Windows (Candara, Palatino Linotype)
+   and Linux/Android (Noto Sans, generic serif). No webfont download needed. */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-mono), monospace;
+  font-family: Optima, Candara, "Noto Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Iowan Old Style", "Palatino Linotype", Palladio, serif;
+}
+
+/* The blog zone keeps its own typography: Bitter (slab serif) with
+   Noto Naskh Arabic as fallback for the Arabic section. */
+.blog-zone,
+.blog-zone h1,
+.blog-zone h2,
+.blog-zone h3,
+.blog-zone h4,
+.blog-zone h5,
+.blog-zone h6 {
+  font-family: var(--font-blog), var(--font-blog-arabic), serif;
 }

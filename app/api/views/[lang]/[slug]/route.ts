@@ -1,30 +1,30 @@
 import { NextResponse } from "next/server";
-import { getViews, incrementViews, isValidSlug, viewsConfigured } from "@/lib/views";
+import { getViews, incrementViews, isValidPost, viewsConfigured } from "@/lib/views";
 
 type RouteContext = {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ lang: string; slug: string }>;
 };
 
 export async function GET(_request: Request, { params }: RouteContext) {
-  const { slug } = await params;
-  if (!isValidSlug(slug)) {
-    return NextResponse.json({ error: "unknown slug" }, { status: 404 });
+  const { lang, slug } = await params;
+  if (!isValidPost(lang, slug)) {
+    return NextResponse.json({ error: "unknown post" }, { status: 404 });
   }
   if (!viewsConfigured) {
     return NextResponse.json({ error: "views not configured" }, { status: 503 });
   }
-  const views = await getViews(slug);
+  const views = await getViews(lang, slug);
   return NextResponse.json({ views });
 }
 
 export async function POST(_request: Request, { params }: RouteContext) {
-  const { slug } = await params;
-  if (!isValidSlug(slug)) {
-    return NextResponse.json({ error: "unknown slug" }, { status: 404 });
+  const { lang, slug } = await params;
+  if (!isValidPost(lang, slug)) {
+    return NextResponse.json({ error: "unknown post" }, { status: 404 });
   }
   if (!viewsConfigured) {
     return NextResponse.json({ error: "views not configured" }, { status: 503 });
   }
-  const views = await incrementViews(slug);
+  const views = await incrementViews(lang, slug);
   return NextResponse.json({ views });
 }

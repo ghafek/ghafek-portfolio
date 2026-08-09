@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { posts } from "./blog/posts";
+import { formatDayMonth, formatYear, getPosts } from "./blog/posts";
 
 export default function Home() {
   const skillGroups = [
@@ -102,9 +102,9 @@ export default function Home() {
         <a className="hover:underline" href="#projects">
           projects
         </a>
-        <a className="hover:underline" href="#blog">
+        <Link className="hover:underline" href="/blog">
           blog
-        </a>
+        </Link>
         <a className="hover:underline" href="#thesis">
           thesis
         </a>
@@ -152,15 +152,22 @@ export default function Home() {
         <section id="blog" className="space-y-6">
           <h2 className="text-xl font-semibold">Blog</h2>
           <ul className="space-y-4">
-            {posts.map((post) => (
+            {getPosts("en").map((post) => (
               <li key={post.slug} className="grid gap-1 sm:grid-cols-[10rem_1fr] sm:gap-6">
-                <span className={muted}>{post.date}</span>
-                <Link className="leading-relaxed underline" href={`/blog/${post.slug}`}>
+                <span className={muted}>
+                  {formatDayMonth(post.date, "en")} {formatYear(post.date, "en")}
+                </span>
+                <Link className="leading-relaxed underline" href={`/blog/en/${post.slug}`}>
                   {post.title}
                 </Link>
               </li>
             ))}
           </ul>
+          <p className={`text-sm ${muted}`}>
+            <Link className="underline" href="/blog">
+              all posts (EN / DE / AR) →
+            </Link>
+          </p>
         </section>
 
         <section id="thesis" className="space-y-4">

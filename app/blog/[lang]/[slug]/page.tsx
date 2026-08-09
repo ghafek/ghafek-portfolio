@@ -1,21 +1,33 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import GiscusComments from "../../components/giscus-comments";
-import ViewCounter from "../../components/view-counter";
-import { posts, readingTime, slugifyHeading } from "../posts";
+import GiscusComments from "@/app/components/giscus-comments";
+import ViewCounter from "@/app/components/view-counter";
+import { isLocale, locales, ui, type Locale } from "@/lib/i18n";
+import {
+  formatFullDate,
+  getPost,
+  postsByLocale,
+  readingMinutes,
+  slugifyHeading,
+} from "../../posts";
 
 type Props = {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ lang: string; slug: string }>;
 };
 
 export function generateStaticParams() {
-  return posts.map((post) => ({ slug: post.slug }));
+  return locales.flatMap((lang) =>
+    postsByLocale[lang].map((post) => ({ lang, slug: post.slug })),
+  );
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
-  const post = posts.find((entry) => entry.slug === slug);
+  const { lang, slug } = await params;
+  if (!isLocale(lang)) {
+    return {};
+  }
+  const post = getPost(lang, slug);
   if (!post) {
     return { title: "Post not found | Ghafek Alsaho" };
   }
@@ -26,43 +38,55 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: post.title,
       description: post.description,
       type: "article",
-      url: `/blog/${post.slug}`,
+      url: `/blog/${lang}/${post.slug}`,
     },
   };
 }
 
 export default async function BlogPostPage({ params }: Props) {
-  const { slug } = await params;
-  const post = posts.find((entry) => entry.slug === slug);
+  const { lang, slug } = await params;
+  if (!isLocale(lang)) {
+    notFound();
+  }
+  const locale: Locale = lang;
+  const post = getPost(locale, slug);
   if (!post) {
     notFound();
   }
-
+  const t = ui[locale];
   const muted = "text-neutral-600 dark:text-neutral-400";
 
   return (
-    <main className="mx-auto min-h-screen w-full max-w-3xl px-6 py-12 sm:py-16">
+    <main className="mt-10">
       <p className="text-sm">
-        <Link className="underline" href="/">
-          ← back to home
+        <Link className="underline" href={`/blog/${locale}`}>
+          {t.allPosts}
         </Link>
       </p>
 
       <article className="mt-10 space-y-10">
         <header className="space-y-4">
-          <h1 className="text-2xl font-semibold tracking-tight">{post.title}</h1>
+          <h1 className="text-3xl font-bold leading-snug">{post.title}</h1>
           <ul className={`space-y-1 text-sm ${muted}`}>
-            <li>author: Ghafek Alsaho</li>
-            <li>date: {post.date}</li>
-            <li>category: {post.category}</li>
-            <li>reading time: {readingTime(post)}</li>
-            <ViewCounter slug={post.slug} />
+            <li>
+              {t.author}: {t.authorName}
+            </li>
+            <li>
+              {t.date}: {formatFullDate(post.date, locale)}
+            </li>
+            <li>
+              {t.category}: {post.category}
+            </li>
+            <li>
+              {t.readingTime}: {t.minRead(readingMinutes(post))}
+            </li>
+            <ViewCounter lang={locale} slug={post.slug} label={t.views} />
           </ul>
         </header>
 
         {post.sections.length > 1 && (
-          <nav aria-label="Table of contents" className="space-y-2">
-            <h2 className="text-sm font-semibold uppercase">Contents</h2>
+          <nav aria-label={t.contents} className="space-y-2">
+            <h2 className="text-sm font-bold uppercase tracking-wide">{t.contents}</h2>
             <ul className="space-y-1 text-sm">
               {post.sections.map((section) => (
                 <li key={section.heading}>
@@ -79,7 +103,7 @@ export default async function BlogPostPage({ params }: Props) {
           <section key={section.heading} className="space-y-3">
             <h2
               id={slugifyHeading(section.heading)}
-              className="scroll-mt-4 text-xl font-semibold"
+              className="scroll-mt-4 text-xl font-bold"
             >
               {section.heading}
             </h2>
@@ -93,7 +117,7 @@ export default async function BlogPostPage({ params }: Props) {
       </article>
 
       <div className="mt-16">
-        <GiscusComments />
+        <GiscusComments lang={locale} heading={t.comments} />
       </div>
     </main>
   );

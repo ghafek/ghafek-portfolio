@@ -13,7 +13,13 @@ const giscusConfig = {
 
 const isConfigured = Boolean(giscusConfig.repoId && giscusConfig.categoryId);
 
-export default function GiscusComments() {
+export default function GiscusComments({
+  lang,
+  heading,
+}: {
+  lang: string;
+  heading: string;
+}) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -34,14 +40,14 @@ export default function GiscusComments() {
     script.setAttribute("data-emit-metadata", "0");
     script.setAttribute("data-input-position", "bottom");
     script.setAttribute("data-theme", "preferred_color_scheme");
-    script.setAttribute("data-lang", "en");
+    script.setAttribute("data-lang", lang);
     script.setAttribute("data-loading", "lazy");
     container.appendChild(script);
-  }, []);
+  }, [lang]);
 
   return (
     <section className="space-y-4">
-      <h2 className="text-xl font-semibold">Comments</h2>
+      <h2 className="text-xl font-semibold">{heading}</h2>
       {isConfigured ? (
         <div ref={containerRef} />
       ) : (

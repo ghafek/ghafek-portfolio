@@ -5,11 +5,19 @@ import { useEffect, useState } from "react";
 // Counts one view per browser session (sessionStorage flag, no cookies and no
 // personal data). Renders nothing until a count is available, so an
 // unconfigured or unreachable counter never breaks the page.
-export default function ViewCounter({ slug }: { slug: string }) {
+export default function ViewCounter({
+  lang,
+  slug,
+  label,
+}: {
+  lang: string;
+  slug: string;
+  label: string;
+}) {
   const [views, setViews] = useState<number | null>(null);
 
   useEffect(() => {
-    const storageKey = `viewed:${slug}`;
+    const storageKey = `viewed:${lang}:${slug}`;
     let alreadyViewed = true;
     try {
       alreadyViewed = sessionStorage.getItem(storageKey) === "1";
@@ -18,7 +26,7 @@ export default function ViewCounter({ slug }: { slug: string }) {
       // Storage unavailable (e.g. strict privacy mode): read-only fallback.
     }
 
-    fetch(`/api/views/${slug}`, { method: alreadyViewed ? "GET" : "POST" })
+    fetch(`/api/views/${lang}/${slug}`, { method: alreadyViewed ? "GET" : "POST" })
       .then((response) => (response.ok ? response.json() : null))
       .then((data: { views?: number } | null) => {
         if (data && typeof data.views === "number") {
@@ -26,9 +34,13 @@ export default function ViewCounter({ slug }: { slug: string }) {
         }
       })
       .catch(() => {});
-  }, [slug]);
+  }, [lang, slug]);
 
   if (views === null) return null;
 
-  return <li>views: {views}</li>;
+  return (
+    <li>
+      {label}: {views}
+    </li>
+  );
 }

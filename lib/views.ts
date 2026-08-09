@@ -1,5 +1,6 @@
 import { Redis } from "@upstash/redis";
-import { posts } from "@/app/blog/posts";
+import { postsByLocale } from "@/app/blog/posts";
+import { isLocale } from "@/lib/i18n";
 
 // The Vercel Upstash integration injects KV_*-named variables by default;
 // a manually created Upstash database uses UPSTASH_*-named ones.
@@ -14,22 +15,21 @@ const redis = viewsConfigured ? new Redis({ url: url!, token: token! }) : null;
 // so counts are namespaced per environment to keep production numbers clean.
 const namespace = process.env.VERCEL_ENV === "production" ? "prod" : "dev";
 
-const validSlugs = new Set(posts.map((post) => post.slug));
-
-export function isValidSlug(slug: string): boolean {
-  return validSlugs.has(slug);
+export function isValidPost(lang: string, slug: string): boolean {
+  if (!isLocale(lang)) return false;
+  return postsByLocale[lang].some((post) => post.slug === slug);
 }
 
-function viewsKey(slug: string): string {
-  return `views:${namespace}:${slug}`;
+function viewsKey(lang: string, slug: string): string {
+  return `views:${namespace}:${lang}:${slug}`;
 }
 
-export async function getViews(slug: string): Promise<number> {
+export async function getViews(lang: string, slug: string): Promise<number> {
   if (!redis) return 0;
-  return (await redis.get<number>(viewsKey(slug))) ?? 0;
+  return (await redis.get<number>(viewsKey(lang, slug))) ?? 0;
 }
 
-export async function incrementViews(slug: string): Promise<number> {
+export async function incrementViews(lang: string, slug: string): Promise<number> {
   if (!redis) return 0;
-  return redis.incr(viewsKey(slug));
+  return redis.incr(viewsKey(lang, slug));
 }
