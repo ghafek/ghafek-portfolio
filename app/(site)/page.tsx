@@ -7,7 +7,6 @@ export default function Home() {
       <p className="leading-relaxed">{about.headline}</p>
       <p className="leading-relaxed">{about.location}</p>
       <p className={`leading-relaxed ${muted}`}>{about.summary}</p>
-      <p className={`leading-relaxed ${muted}`}>{about.spokenLanguages}</p>
     </section>
   );
 }

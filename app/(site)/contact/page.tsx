@@ -1,4 +1,4 @@
-import { contact, muted } from "@/lib/content";
+import { about, contact, muted } from "@/lib/content";
 
 export const metadata = {
   title: "Contact | Ghafek Alsaho",
@@ -13,6 +13,7 @@ export default function ContactPage() {
       <p className={`leading-relaxed ${muted}`}>
         Looking for roles in {contact.lookingFor.join(", ")}.
       </p>
+      <p className={`leading-relaxed ${muted}`}>{about.spokenLanguages}</p>
       <ul className="space-y-1">
         {contact.links.map((link) => (
           <li key={link.href}>
