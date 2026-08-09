@@ -2,30 +2,25 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Impressum | Ghafek Alsaho",
-  description: "Anbieterkennzeichnung und Kontakt für diese Website.",
+  description: "Provider identification and contact details for this website.",
 };
 
 export default function ImpressumPage() {
   return (
-    <main
-      lang="de"
-      className="mx-auto min-h-screen w-full max-w-3xl px-6 py-12 sm:py-16"
-    >
-      <h1 className="text-2xl font-semibold tracking-tight">Impressum</h1>
+    <main className="mx-auto min-h-screen w-full max-w-3xl px-6 py-12 sm:py-16">
+      <h1 className="text-2xl font-semibold tracking-tight">Impressum (legal notice)</h1>
 
       <div className="mt-10 space-y-8 leading-relaxed text-neutral-600 dark:text-neutral-400">
         <section className="space-y-3">
-          <h2 className="font-semibold text-neutral-900 dark:text-neutral-100">
-            Anbieter
-          </h2>
+          <h2 className="font-semibold text-neutral-900 dark:text-neutral-100">Provider</h2>
           <p>Ghafek Alsaho</p>
-          <p>Berlin, Deutschland</p>
+          <p>Berlin, Germany</p>
         </section>
 
         <section className="space-y-3">
-          <h2 className="font-semibold text-neutral-900 dark:text-neutral-100">Kontakt</h2>
+          <h2 className="font-semibold text-neutral-900 dark:text-neutral-100">Contact</h2>
           <p>
-            E-Mail:{" "}
+            Email:{" "}
             <a className="underline" href="mailto:alsaho@ghafek.xyz">
               alsaho@ghafek.xyz
             </a>
@@ -34,38 +29,37 @@ export default function ImpressumPage() {
 
         <section className="space-y-3">
           <h2 className="font-semibold text-neutral-900 dark:text-neutral-100">
-            Art der Website
+            Nature of this website
           </h2>
           <p>
-            Diese Website ist ein privates, nicht kommerzielles Projekt. Es werden keine
-            Waren oder Dienstleistungen angeboten, keine Werbung geschaltet und keine
-            Einnahmen erzielt.
+            This website is a private, non-commercial project. No goods or services are
+            offered, no advertising is displayed and no revenue is generated.
           </p>
         </section>
 
         <section className="space-y-3">
           <h2 className="font-semibold text-neutral-900 dark:text-neutral-100">
-            Haftung für Inhalte und Links
+            Liability for content and links
           </h2>
           <p>
-            Die Inhalte dieser Website wurden mit Sorgfalt erstellt. Für die Richtigkeit,
-            Vollständigkeit und Aktualität der Inhalte wird keine Gewähr übernommen.
+            The content of this website has been compiled with care. No guarantee is given for
+            its accuracy, completeness or timeliness.
           </p>
           <p>
-            Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte kein
-            Einfluss besteht. Für die Inhalte der verlinkten Seiten ist stets der jeweilige
-            Anbieter oder Betreiber verantwortlich.
+            This website contains links to external websites over whose content the provider
+            has no influence. Responsibility for the content of linked pages always rests with
+            their respective provider or operator.
           </p>
         </section>
 
         <section className="space-y-3">
           <h2 className="font-semibold text-neutral-900 dark:text-neutral-100">
-            Datenschutz
+            Data protection
           </h2>
           <p>
-            Informationen zur Verarbeitung personenbezogener Daten finden Sie in der{" "}
+            Information on the processing of personal data can be found in the{" "}
             <Link className="underline" href="/datenschutz">
-              Datenschutzerklärung
+              privacy policy
             </Link>
             .
           </p>

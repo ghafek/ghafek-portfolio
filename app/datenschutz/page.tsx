@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Datenschutz | Ghafek Alsaho",
-  description: "Datenschutzerklärung für diese Website.",
+  description: "Privacy policy for this website.",
 };
 
 type Section = {
@@ -12,123 +12,120 @@ type Section = {
 
 const sections: Section[] = [
   {
-    heading: "1. Verantwortlicher",
+    heading: "1. Controller",
     paragraphs: [
-      "Verantwortlich für die Datenverarbeitung auf dieser Website ist:",
-      "Ghafek Alsaho, Berlin, Deutschland. E-Mail: alsaho@ghafek.xyz",
-      "Diese Website ist ein privates, nicht kommerzielles Projekt. Es werden keine Waren oder Dienstleistungen angeboten und keine Werbung geschaltet.",
+      "The controller for the processing of personal data on this website is:",
+      "Ghafek Alsaho, Berlin, Germany. Email: alsaho@ghafek.xyz",
+      "This website is a private, non-commercial project. No goods or services are offered and no advertising is displayed.",
     ],
   },
   {
     heading: "2. Hosting",
     paragraphs: [
-      "Diese Website wird bei der Vercel Inc., USA, gehostet. Beim Aufruf der Website verarbeitet Vercel technisch notwendige Daten, insbesondere die IP-Adresse der aufrufenden Geräte.",
-      "Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Das berechtigte Interesse liegt in einer sicheren, stabilen und effizienten Bereitstellung der Website. Die Verarbeitung erfolgt auf Grundlage der Datenschutz- und Vertragsbedingungen von Vercel. Soweit Vercel als Auftragsverarbeiter tätig wird und ein Vertrag zur Auftragsverarbeitung erforderlich und verfügbar ist, erfolgt die Verarbeitung auf dieser Grundlage.",
-      "Da Vercel seinen Sitz in den USA hat, kann es zu einer Übermittlung personenbezogener Daten in ein Drittland kommen. Vercel Inc. ist nach dem EU-U.S. Data Privacy Framework zertifiziert; die Übermittlung erfolgt auf dieser Grundlage, ergänzend auf Grundlage der EU-Standardvertragsklauseln. Der Zertifizierungsstatus kann über die Liste unter dataprivacyframework.gov eingesehen werden.",
+      "This website is hosted by Vercel Inc., USA. When the site is accessed, Vercel processes technically necessary data, in particular the IP address of the requesting device.",
+      "The legal basis is Art. 6(1)(f) GDPR. The legitimate interest lies in providing the website securely, reliably and efficiently. Processing takes place on the basis of Vercel's privacy and contractual terms. Insofar as Vercel acts as a processor and a data processing agreement is required and available, processing takes place on that basis.",
+      "As Vercel is based in the USA, personal data may be transferred to a third country. Vercel Inc. is certified under the EU-U.S. Data Privacy Framework; transfers take place on that basis, supplemented by the EU Standard Contractual Clauses. The current certification status can be checked in the list at dataprivacyframework.gov.",
     ],
   },
   {
-    heading: "3. Server-Logfiles",
+    heading: "3. Server log files",
     paragraphs: [
-      "Beim Aufruf dieser Website werden automatisch Informationen übertragen und in Server-Logfiles verarbeitet: IP-Adresse, Datum und Uhrzeit der Anfrage, die konkret aufgerufene Seite, die übertragene Datenmenge, die zuvor besuchte Seite (Referrer) sowie Angaben zu Browser und Betriebssystem.",
-      "Diese Daten dienen der Auslieferung der Website, der Systemsicherheit und der Fehleranalyse. Sie werden nicht mit anderen Datenquellen zusammengeführt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.",
-      "Server-Logfiles werden nur so lange gespeichert, wie dies für die genannten Zwecke erforderlich ist. Die konkrete Speicherdauer richtet sich nach den Voreinstellungen des Hosting-Anbieters. Eine darüber hinausgehende Speicherung oder Auswertung durch den Verantwortlichen findet nicht statt.",
+      "When this website is accessed, information is automatically transmitted and processed in server log files: IP address, date and time of the request, the specific page requested, the volume of data transferred, the previously visited page (referrer), and details of the browser and operating system.",
+      "This data serves to deliver the website, maintain system security and analyse errors. It is not combined with other data sources. The legal basis is Art. 6(1)(f) GDPR.",
+      "Server log files are retained only for as long as necessary for the purposes stated. The specific retention period follows the hosting provider's default settings. No storage or evaluation beyond this is carried out by the controller.",
     ],
   },
   {
     heading: "4. Cookies",
     paragraphs: [
-      "Diese Website setzt keine eigenen Cookies und verwendet keine Cookies zu Analyse-, Marketing- oder Wiedererkennungszwecken. Beim bloßen Aufruf der Seiten werden keine Informationen auf Ihrem Endgerät gespeichert oder von dort ausgelesen.",
-      "Nur wenn Sie die Kommentarfunktion durch Klick ausdrücklich laden, können durch giscus und GitHub Einträge im Browserspeicher angelegt und Cookies gesetzt werden, insbesondere wenn Sie bei GitHub angemeldet sind. Einzelheiten finden Sie in Abschnitt 8. Auf diese Verarbeitung hat der Verantwortliche keinen Einfluss.",
+      "This website sets no cookies of its own and uses no cookies for analytics, marketing or recognition purposes. Simply visiting the pages neither stores information on your device nor reads information from it.",
+      "Only if you explicitly load the comment function by clicking may giscus and GitHub create entries in your browser storage and set cookies, in particular if you are signed in to GitHub. Details are set out in section 8. The controller has no influence over that processing.",
     ],
   },
   {
     heading: "5. Vercel Web Analytics",
     paragraphs: [
-      "Diese Website nutzt Vercel Web Analytics zur Reichweitenmessung. Der Dienst arbeitet ohne Cookies und ohne geräteübergreifende Wiedererkennung.",
-      "Verarbeitet werden dabei insbesondere die aufgerufene URL beziehungsweise der Pfad, die verweisende Seite (Referrer), gefilterte URL-Parameter, das Herkunftsland, Angaben zu Browser, Gerätetyp und Betriebssystem sowie Zeitstempel. Zur Unterscheidung von Besuchen bildet Vercel aus Anfragedaten einen Hashwert, der nach 24 Stunden verworfen wird. IP-Adressen werden nicht gespeichert.",
-      "Es werden keine Profile über einzelne Besucherinnen und Besucher gebildet und keine Daten an Werbenetzwerke weitergegeben. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; das berechtigte Interesse liegt in einer datensparsamen statistischen Auswertung der Websitenutzung.",
+      "This website uses Vercel Web Analytics to measure reach. The service works without cookies and without cross-device recognition.",
+      "The data processed includes in particular the URL or path requested, the referring page, filtered URL parameters, the country of origin, information about browser, device type and operating system, and timestamps. To distinguish visits, Vercel derives a hash value from request data which is discarded after 24 hours. IP addresses are not stored.",
+      "No profiles of individual visitors are created and no data is passed to advertising networks. The legal basis is Art. 6(1)(f) GDPR; the legitimate interest lies in a data-minimising statistical evaluation of how the website is used.",
     ],
   },
   {
     heading: "6. Vercel Speed Insights",
     paragraphs: [
-      "Zur Messung der technischen Performance wird Vercel Speed Insights eingesetzt. Erfasst werden Messwerte zur Ladegeschwindigkeit und Darstellungsqualität (Core Web Vitals) sowie ergänzend die aufgerufene URL und Route, Angaben zur Verbindungsgeschwindigkeit, Browser, Gerätetyp und Betriebssystem, das Herkunftsland, Angaben zum auslösenden Seitenelement, Informationen zum eingesetzten SDK und Zeitstempel. Auch dieser Dienst arbeitet ohne Cookies und ohne Profilbildung; eine Zuordnung zu einzelnen Personen erfolgt nicht.",
-      "Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; das berechtigte Interesse liegt in der technischen Optimierung der Website.",
+      "Vercel Speed Insights is used to measure technical performance. It records metrics on loading speed and rendering quality (Core Web Vitals), together with the URL and route requested, information on connection speed, browser, device type and operating system, the country of origin, information on the page element that triggered the measurement, information about the SDK used, and timestamps. This service also works without cookies and without profiling; no attribution to individual persons takes place.",
+      "The legal basis is Art. 6(1)(f) GDPR; the legitimate interest lies in the technical optimisation of the website.",
     ],
   },
   {
-    heading: "7. Aufrufzähler für Blogbeiträge",
+    heading: "7. View counter for blog posts",
     paragraphs: [
-      "Soweit auf Blogbeiträgen die Anzahl der Aufrufe angezeigt wird, wird ausschließlich eine Zahl pro Beitrag in einer Redis-Datenbank bei der Upstash, Inc. (USA) gespeichert. Es werden keine IP-Adressen, keine Kennungen und keine sonstigen personenbezogenen Daten gespeichert.",
-      "Es werden keine Informationen auf Ihrem Endgerät gespeichert oder von dort ausgelesen. Gezählt werden Seitenaufrufe, nicht einzelne Personen; der angezeigte Wert ist daher nur ein Näherungswert.",
-      "Der Zählerstand selbst enthält keine personenbezogenen Daten und wird dauerhaft gespeichert. Upstash, Inc. ist nach dem EU-U.S. Data Privacy Framework zertifiziert; soweit im Rahmen des Betriebs der Datenbank personenbezogene Daten in die USA übermittelt werden, erfolgt dies auf dieser Grundlage, ergänzend auf Grundlage der EU-Standardvertragsklauseln.",
-      "Rechtsgrundlage für die Speicherung des Zählerstands ist Art. 6 Abs. 1 lit. f DSGVO.",
+      "Where a view count is displayed on blog posts, only a single number per post is stored in a Redis database operated by Upstash, Inc. (USA). No IP addresses, no identifiers and no other personal data are stored.",
+      "No information is stored on your device or read from it. Page loads are counted rather than individual people, so the figure shown is only an approximation.",
+      "The counter value itself contains no personal data and is stored permanently. Upstash, Inc. is certified under the EU-U.S. Data Privacy Framework; insofar as personal data is transferred to the USA in operating the database, this takes place on that basis, supplemented by the EU Standard Contractual Clauses.",
+      "The legal basis for storing the counter value is Art. 6(1)(f) GDPR.",
     ],
   },
   {
-    heading: "8. Kommentarfunktion (giscus / GitHub)",
+    heading: "8. Comment function (giscus / GitHub)",
     paragraphs: [
-      "Soweit unter Blogbeiträgen die Kommentarfunktion giscus eingebunden ist, werden Kommentare nicht auf dieser Website, sondern als GitHub Discussions im zugehörigen öffentlichen Repository gespeichert. Anbieter ist die GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA, ein Unternehmen der Microsoft Corporation.",
-      "Die Kommentarfunktion wird nicht automatisch geladen. Unter dem Beitrag wird zunächst nur ein Hinweis mit einer Schaltfläche angezeigt. Erst wenn Sie diese Schaltfläche aktiv anklicken, wird das Skript von giscus.app nachgeladen und eine Verbindung zu giscus.app und GitHub aufgebaut. Dabei wird Ihre IP-Adresse an diese Anbieter übertragen.",
-      "Nach dem Laden speichert giscus im lokalen Speicher (Local Storage) Ihres Browsers einen Eintrag zur Sitzungsverwaltung; nach einer Anmeldung bei GitHub wird dort zusätzlich eine Sitzungskennung abgelegt. Diese Speicherung erfolgt ausschließlich aufgrund Ihrer vorherigen Einwilligung nach § 25 Abs. 1 TDDDG. Sie können die Kommentarfunktion jederzeit ungenutzt lassen; ohne Klick werden keine Daten an giscus oder GitHub übertragen.",
-      "Zum Verfassen eines Kommentars ist ein GitHub-Konto und eine Anmeldung bei GitHub erforderlich. Es gelten insoweit die Datenschutzbestimmungen von GitHub. Veröffentlichte Kommentare sind öffentlich einsehbar und mit dem GitHub-Benutzernamen verknüpft. Die Speicherdauer richtet sich nach den Vorgaben von GitHub; Kommentare bleiben grundsätzlich so lange gespeichert, bis sie gelöscht werden.",
-      "GitHub, Inc. ist nach dem EU-U.S. Data Privacy Framework zertifiziert; die Übermittlung personenbezogener Daten in die USA erfolgt auf dieser Grundlage, ergänzend auf Grundlage der EU-Standardvertragsklauseln.",
-      "Rechtsgrundlage für das Laden der Kommentarfunktion und die damit verbundene Speicherung im Browser ist Ihre Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO in Verbindung mit § 25 Abs. 1 TDDDG. Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, indem Sie die Kommentarfunktion nicht mehr laden und die von giscus gesetzten Einträge in den Browsereinstellungen löschen.",
-      "Weitere Informationen finden sich in den Datenschutzbestimmungen von GitHub sowie in den Informationen des Dienstes giscus.",
+      "Where the giscus comment function is embedded below blog posts, comments are not stored on this website but as GitHub Discussions in the associated public repository. The provider is GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA, a company of Microsoft Corporation.",
+      "The comment function is not loaded automatically. Initially only a notice and a button are shown below the post. The script from giscus.app is loaded, and a connection to giscus.app and GitHub established, only once you actively click that button. Your IP address is transmitted to those providers in the process.",
+      "After loading, giscus stores an entry for session management in your browser's local storage; once you sign in to GitHub, a session identifier is stored there as well. This storage takes place solely on the basis of your prior consent under Sec. 25(1) TDDDG. You may leave the comment function unused at any time; without a click, no data is transmitted to giscus or GitHub.",
+      "A GitHub account and sign-in are required in order to post a comment. GitHub's privacy terms apply in that respect. Published comments are publicly visible and linked to the GitHub username. Retention is governed by GitHub's provisions; comments generally remain stored until they are deleted.",
+      "GitHub, Inc. is certified under the EU-U.S. Data Privacy Framework; transfers of personal data to the USA take place on that basis, supplemented by the EU Standard Contractual Clauses.",
+      "The legal basis for loading the comment function, and for the associated storage in your browser, is your consent under Art. 6(1)(a) GDPR in conjunction with Sec. 25(1) TDDDG. You may withdraw that consent at any time with effect for the future by no longer loading the comment function and deleting the entries set by giscus in your browser settings.",
+      "Further information is available in GitHub's privacy statement and in the information published by the giscus project.",
     ],
   },
   {
-    heading: "9. Schriftarten",
+    heading: "9. Fonts",
     paragraphs: [
-      "Die verwendeten Schriftarten werden lokal von dieser Website ausgeliefert. Beim Aufruf der Seite wird keine Verbindung zu Servern von Google oder anderen Schriftanbietern hergestellt.",
+      "The fonts used are served locally by this website. No connection to servers operated by Google or any other font provider is established when a page is loaded.",
     ],
   },
   {
-    heading: "10. Kontaktaufnahme per E-Mail",
+    heading: "10. Contact by email",
     paragraphs: [
-      "Diese Website enthält kein Kontaktformular. Bei einer Kontaktaufnahme per E-Mail werden die übermittelten Daten ausschließlich zur Bearbeitung der Anfrage verarbeitet und nach abschließender Bearbeitung gelöscht, soweit keine gesetzlichen Aufbewahrungspflichten entgegenstehen.",
-      "Die E-Mail-Kommunikation über die Adresse alsaho@ghafek.xyz erfolgt über iCloud Mail. Anbieter ist die Apple Distribution International Ltd., Hollyhill Industrial Estate, Hollyhill, Cork, Irland. Dabei können personenbezogene Daten wie E-Mail-Adresse, Inhalt der Nachricht, technische Metadaten und Zeitpunkte der Kommunikation verarbeitet werden.",
-      "Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO beziehungsweise, bei Anbahnung eines Vertrags- oder Beschäftigungsverhältnisses, Art. 6 Abs. 1 lit. b DSGVO.",
+      "This website contains no contact form. If you make contact by email, the data you send is processed solely in order to handle your enquiry and is deleted once it has been dealt with, unless statutory retention obligations apply.",
+      "Email communication via the address alsaho@ghafek.xyz takes place through iCloud Mail. The provider is Apple Distribution International Ltd., Hollyhill Industrial Estate, Hollyhill, Cork, Ireland. Personal data such as the email address, the content of the message, technical metadata and the timing of the communication may be processed in this context.",
+      "The legal basis is Art. 6(1)(f) GDPR or, where a contractual or employment relationship is being initiated, Art. 6(1)(b) GDPR.",
     ],
   },
   {
-    heading: "11. Verschlüsselung",
+    heading: "11. Encryption",
     paragraphs: [
-      "Diese Website nutzt aus Sicherheitsgründen eine TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie an der Adresszeile des Browsers (https).",
+      "This website uses TLS encryption for security reasons. You can recognise an encrypted connection by the browser address bar (https).",
     ],
   },
   {
-    heading: "12. Ihre Rechte",
+    heading: "12. Your rights",
     paragraphs: [
-      "Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16 DSGVO), Löschung (Art. 17 DSGVO), Einschränkung der Verarbeitung (Art. 18 DSGVO) sowie auf Datenübertragbarkeit (Art. 20 DSGVO).",
-      "Zur Ausübung dieser Rechte genügt eine formlose E-Mail an alsaho@ghafek.xyz.",
-      "Unabhängig davon steht Ihnen ein Beschwerderecht bei einer Datenschutz-Aufsichtsbehörde zu, etwa bei der Berliner Beauftragten für Datenschutz und Informationsfreiheit.",
+      "You have the right of access (Art. 15 GDPR), to rectification (Art. 16 GDPR), to erasure (Art. 17 GDPR), to restriction of processing (Art. 18 GDPR) and to data portability (Art. 20 GDPR).",
+      "An informal email to alsaho@ghafek.xyz is enough to exercise these rights.",
+      "Independently of this, you have the right to lodge a complaint with a data protection supervisory authority, for example the Berlin Commissioner for Data Protection and Freedom of Information.",
     ],
   },
   {
-    heading: "13. Widerspruchsrecht (Art. 21 DSGVO)",
+    heading: "13. Right to object (Art. 21 GDPR)",
     paragraphs: [
-      "Wenn die Datenverarbeitung auf Grundlage berechtigter Interessen nach Art. 6 Abs. 1 lit. f DSGVO erfolgt, haben Sie jederzeit das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, gegen diese Verarbeitung Widerspruch einzulegen.",
-      "Legen Sie Widerspruch ein, werden die betroffenen Daten nicht mehr auf dieser Grundlage verarbeitet, es sei denn, es liegen zwingende schutzwürdige Gründe für die Verarbeitung vor, die Ihre Interessen, Rechte und Freiheiten überwiegen, oder die Verarbeitung dient der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.",
-      "Ein Widerspruch kann formlos per E-Mail an alsaho@ghafek.xyz erklärt werden.",
+      "Where processing is based on legitimate interests under Art. 6(1)(f) GDPR, you have the right to object to that processing at any time on grounds relating to your particular situation.",
+      "If you object, the data concerned will no longer be processed on that basis unless there are compelling legitimate grounds for the processing which override your interests, rights and freedoms, or unless the processing serves to establish, exercise or defend legal claims.",
+      "An objection can be raised informally by email to alsaho@ghafek.xyz.",
     ],
   },
   {
-    heading: "14. Automatisierte Entscheidungsfindung",
+    heading: "14. Automated decision-making",
     paragraphs: [
-      "Eine automatisierte Entscheidungsfindung einschließlich Profiling im Sinne des Art. 22 DSGVO findet auf dieser Website nicht statt.",
+      "No automated decision-making, including profiling, within the meaning of Art. 22 GDPR takes place on this website.",
     ],
   },
 ];
 
 export default function DatenschutzPage() {
   return (
-    <main
-      lang="de"
-      className="mx-auto min-h-screen w-full max-w-3xl px-6 py-12 sm:py-16"
-    >
-      <h1 className="text-2xl font-semibold tracking-tight">Datenschutzerklärung</h1>
+    <main className="mx-auto min-h-screen w-full max-w-3xl px-6 py-12 sm:py-16">
+      <h1 className="text-2xl font-semibold tracking-tight">Datenschutz (privacy policy)</h1>
 
       <div className="mt-10 space-y-10">
         {sections.map((section) => (
@@ -147,7 +144,7 @@ export default function DatenschutzPage() {
       </div>
 
       <p className="mt-10 text-sm text-neutral-600 dark:text-neutral-400">
-        Stand: August 2026
+        Last updated: August 2026
       </p>
 
       <p className="mt-10 text-sm">
