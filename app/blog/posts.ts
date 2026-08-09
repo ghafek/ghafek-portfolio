@@ -19,39 +19,18 @@ export type Post = {
 export const postsByLocale: Record<Locale, Post[]> = {
   en: [
     {
-      slug: "sample-post-infrastructure",
-      title: "Sample post: infrastructure notes (dummy)",
-      date: "2026-07-01",
-      category: "infrastructure",
-      description:
-        "Dummy English post to exercise the new per-language blog structure.",
-      sections: [
-        {
-          heading: "About this post",
-          paragraphs: [
-            "This is dummy content for the new blog structure. It exists only to test the layout, metadata, table of contents, view counter, and comments.",
-            "It will be replaced by a real post before anything goes live.",
-          ],
-        },
-        {
-          heading: "What goes here later",
-          paragraphs: [
-            "Real write-ups about backend engineering, Kubernetes, CI/CD, and automation.",
-          ],
-        },
-      ],
-    },
-    {
-      slug: "sample-post-hello",
-      title: "Sample post: hello world (dummy)",
-      date: "2025-11-15",
+      slug: "hello-world",
+      title: "Hello world!",
+      date: "2026-08-09",
       category: "general",
-      description: "Older dummy English post to exercise year grouping on the index.",
+      description: "First post: what this blog is for and what I plan to write about.",
       sections: [
         {
-          heading: "Why this exists",
+          heading: "Why this blog exists",
           paragraphs: [
-            "A second dummy post with an older date, so the blog index can demonstrate grouping posts by year.",
+            "I set this blog up as somewhere to write down what I learn while working on backend services, infrastructure and data systems. Short, practical notes rather than long essays.",
+            "Topics will follow whatever I am actually working on: Kubernetes and logging, CI/CD and automation, API integration, and large-scale data systems from my studies at TU Berlin.",
+            "The English, German and Arabic sections are independent. Each one has its own posts rather than translations of the others.",
           ],
         },
       ],
@@ -59,39 +38,18 @@ export const postsByLocale: Record<Locale, Post[]> = {
   ],
   de: [
     {
-      slug: "beispielbeitrag-backend",
-      title: "Beispielbeitrag: Backend-Notizen (Dummy)",
-      date: "2026-06-20",
-      category: "backend",
-      description:
-        "Deutscher Dummy-Beitrag zum Testen der neuen mehrsprachigen Blogstruktur.",
-      sections: [
-        {
-          heading: "Über diesen Beitrag",
-          paragraphs: [
-            "Dies ist Platzhalterinhalt für die neue Blogstruktur. Er testet Layout, Metadaten, Inhaltsverzeichnis, Aufrufzähler und Kommentare.",
-            "Er wird vor der Veröffentlichung durch einen echten Beitrag ersetzt.",
-          ],
-        },
-        {
-          heading: "Was später hierher kommt",
-          paragraphs: [
-            "Echte Beiträge über Backend-Entwicklung, Infrastruktur und Automatisierung — unabhängig vom englischen Blogbereich.",
-          ],
-        },
-      ],
-    },
-    {
-      slug: "beispielbeitrag-hallo",
-      title: "Beispielbeitrag: Hallo Welt (Dummy)",
-      date: "2025-10-05",
+      slug: "hallo-welt",
+      title: "Hallo Welt!",
+      date: "2026-08-09",
       category: "allgemein",
-      description: "Älterer deutscher Dummy-Beitrag für die Jahresgruppierung.",
+      description: "Erster Beitrag: worum es in diesem Blog geht.",
       sections: [
         {
-          heading: "Warum es diesen Beitrag gibt",
+          heading: "Warum es diesen Blog gibt",
           paragraphs: [
-            "Ein zweiter Dummy-Beitrag mit älterem Datum, damit die Gruppierung nach Jahren sichtbar wird.",
+            "Ich habe diesen Blog eingerichtet, um festzuhalten, was ich bei der Arbeit an Backend-Diensten, Infrastruktur und Datensystemen lerne. Kurze, praktische Notizen statt langer Essays.",
+            "Die Themen richten sich danach, woran ich gerade arbeite: Kubernetes und Logging, CI/CD und Automatisierung, API-Integration sowie großskalige Datensysteme aus meinem Studium an der TU Berlin.",
+            "Die englischen, deutschen und arabischen Bereiche sind unabhängig voneinander. Jeder hat eigene Beiträge und keine Übersetzungen.",
           ],
         },
       ],
@@ -99,38 +57,18 @@ export const postsByLocale: Record<Locale, Post[]> = {
   ],
   ar: [
     {
-      slug: "tadwina-tajribiya-bunya",
-      title: "تدوينة تجريبية: ملاحظات عن البنية التحتية (محتوى مؤقت)",
-      date: "2026-05-10",
-      category: "بنية تحتية",
-      description: "تدوينة عربية تجريبية لاختبار هيكل المدونة الجديد متعدد اللغات.",
-      sections: [
-        {
-          heading: "عن هذه التدوينة",
-          paragraphs: [
-            "هذا محتوى تجريبي مؤقت لاختبار هيكل المدونة الجديد: التنسيق، والبيانات الوصفية، وجدول المحتويات، وعداد المشاهدات، والتعليقات.",
-            "سيتم استبداله بتدوينة حقيقية قبل النشر.",
-          ],
-        },
-        {
-          heading: "ماذا سيأتي لاحقًا",
-          paragraphs: [
-            "تدوينات حقيقية عن هندسة البرمجيات والبنية التحتية — مستقلة عن القسمين الإنجليزي والألماني.",
-          ],
-        },
-      ],
-    },
-    {
-      slug: "tadwina-tajribiya-marhaba",
-      title: "تدوينة تجريبية: مرحبًا بالعالم (محتوى مؤقت)",
-      date: "2025-09-01",
+      slug: "marhaban-bil-aalam",
+      title: "مرحبًا بالعالم!",
+      date: "2026-08-09",
       category: "عام",
-      description: "تدوينة عربية تجريبية أقدم لاختبار التجميع حسب السنة.",
+      description: "أول تدوينة: عن ماذا تدور هذه المدونة.",
       sections: [
         {
-          heading: "لماذا هذه التدوينة",
+          heading: "لماذا هذه المدونة",
           paragraphs: [
-            "تدوينة تجريبية ثانية بتاريخ أقدم حتى يظهر تجميع التدوينات حسب السنة في صفحة الفهرس.",
+            "أنشأت هذه المدونة لأدوّن فيها ما أتعلمه أثناء العمل على الخدمات الخلفية والبنية التحتية وأنظمة البيانات. ملاحظات قصيرة وعملية أكثر منها مقالات طويلة.",
+            "ستتبع المواضيع ما أعمل عليه فعليًا: كوبرنيتس والسجلات، والتكامل والنشر المستمر والأتمتة، وتكامل واجهات البرمجة، وأنظمة البيانات واسعة النطاق من دراستي في جامعة برلين التقنية.",
+            "الأقسام الإنجليزية والألمانية والعربية مستقلة عن بعضها. لكل قسم تدويناته الخاصة وليست ترجمات.",
           ],
         },
       ],

@@ -7,21 +7,21 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.ghafek.xyz"),
   title: "Ghafek Alsaho | Portfolio",
   description:
-    "Computer Science student at TU Berlin and working student in tech, focused on software engineering, automation, cloud systems, and AI/ML.",
+    "Computer Science student at Technische Universität Berlin. Technical service and automation, platform operations, API integration, and large-scale data systems.",
   keywords: [
     "Ghafek Alsaho",
     "portfolio",
     "Computer Science",
     "TU Berlin",
-    "software engineering",
-    "cloud infrastructure",
     "automation",
-    "AI/ML",
+    "platform operations",
+    "API integration",
+    "Apache SystemDS",
   ],
   openGraph: {
     title: "Ghafek Alsaho | Portfolio",
     description:
-      "Computer Science student and software developer interested in backend systems, cloud deployments, automation, and AI/ML.",
+      "Computer Science student at TU Berlin working on technical service and automation, platform operations, API integration, and large-scale data systems.",
     type: "website",
     url: "https://www.ghafek.xyz",
   },
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "Ghafek Alsaho | Portfolio",
     description:
-      "Computer Science student and software developer focused on practical systems and modern cloud-native tooling.",
+      "Computer Science student at TU Berlin working on technical service and automation, platform operations, and large-scale data systems.",
   },
 };
 
