@@ -2,9 +2,10 @@
 
 import { useEffect, useState } from "react";
 
-// Counts one view per browser session (sessionStorage flag, no cookies and no
-// personal data). Renders nothing until a count is available, so an
-// unconfigured or unreachable counter never breaks the page.
+// Counts page loads. Nothing is written to the visitor's device: an earlier
+// sessionStorage marker was dropped because storing it would need consent
+// under Sec. 25 TDDDG, and the exemption for it was not defensible. The
+// counter is therefore approximate rather than a unique-visitor figure.
 export default function ViewCounter({
   lang,
   slug,
@@ -17,23 +18,20 @@ export default function ViewCounter({
   const [views, setViews] = useState<number | null>(null);
 
   useEffect(() => {
-    const storageKey = `viewed:${lang}:${slug}`;
-    let alreadyViewed = true;
-    try {
-      alreadyViewed = sessionStorage.getItem(storageKey) === "1";
-      sessionStorage.setItem(storageKey, "1");
-    } catch {
-      // Storage unavailable (e.g. strict privacy mode): read-only fallback.
-    }
+    let cancelled = false;
 
-    fetch(`/api/views/${lang}/${slug}`, { method: alreadyViewed ? "GET" : "POST" })
+    fetch(`/api/views/${lang}/${slug}`, { method: "POST" })
       .then((response) => (response.ok ? response.json() : null))
       .then((data: { views?: number } | null) => {
-        if (data && typeof data.views === "number") {
+        if (!cancelled && data && typeof data.views === "number") {
           setViews(data.views);
         }
       })
       .catch(() => {});
+
+    return () => {
+      cancelled = true;
+    };
   }, [lang, slug]);
 
   if (views === null) return null;

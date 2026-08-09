@@ -16,6 +16,8 @@ type Props = {
   params: Promise<{ lang: string; slug: string }>;
 };
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return locales.flatMap((lang) =>
     postsByLocale[lang].map((post) => ({ lang, slug: post.slug })),
@@ -117,7 +119,13 @@ export default async function BlogPostPage({ params }: Props) {
       </article>
 
       <div className="mt-16">
-        <GiscusComments lang={locale} heading={t.comments} />
+        <GiscusComments
+          lang={locale}
+          heading={t.comments}
+          notice={t.commentsNotice}
+          loadLabel={t.commentsLoad}
+          gitHubLabel={t.commentsGitHub}
+        />
       </div>
     </main>
   );

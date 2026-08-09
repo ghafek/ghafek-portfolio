@@ -61,7 +61,7 @@ export default function Home() {
     {
       title: "Star Schema Benchmark for Apache SystemDS",
       description:
-        "Implemented the full 13-query Star Schema Benchmark suite in the relational-algebra DML of SystemDS, together with automated performance-run harnesses and documentation. Merged into apache/systemds main as [SYSTEMDS-3862], 16 files and roughly 5,800 lines, committed by the project lead. It grew out of the Large-scale Data Engineering project with the Big Data Engineering (DAMS) group at TU Berlin.",
+        "Co-developed the initial Star Schema Benchmark implementation for SystemDS with a project partner, contributing query scripts in the relational-algebra DML, the automated performance-run harnesses and the documentation. The 16-file integration commit landed on apache/systemds main. It grew out of the Large-scale Data Engineering project with the Big Data Engineering (DAMS) group at TU Berlin.",
       href: "https://github.com/apache/systemds/commit/20a7b67419e284ed908ededd19e80cd2713dca5a",
       linkText: "apache/systemds commit 20a7b674",
     },
@@ -360,6 +360,9 @@ export default function Home() {
 
       <footer className="mt-16 border-t border-neutral-300 pt-6 text-sm dark:border-neutral-700">
         <div className="flex flex-wrap gap-x-6 gap-y-2">
+          <Link className="underline" href="/impressum">
+            Impressum
+          </Link>
           <Link className="underline" href="/datenschutz">
             Datenschutz
           </Link>

@@ -41,6 +41,7 @@ export default async function BlogIndexPage({ params }: Props) {
 
   return (
     <main className="mt-10 space-y-12">
+      <h1 className="text-2xl font-bold tracking-tight">{t.blogTitle}</h1>
       <p className="leading-relaxed text-neutral-600 dark:text-neutral-400">{t.intro}</p>
 
       {years.map(([year, posts]) => (

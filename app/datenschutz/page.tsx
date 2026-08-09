@@ -24,7 +24,7 @@ const sections: Section[] = [
     paragraphs: [
       "Diese Website wird bei der Vercel Inc., USA, gehostet. Beim Aufruf der Website verarbeitet Vercel technisch notwendige Daten, insbesondere die IP-Adresse der aufrufenden Geräte.",
       "Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Das berechtigte Interesse liegt in einer sicheren, stabilen und effizienten Bereitstellung der Website. Die Verarbeitung erfolgt auf Grundlage der Datenschutz- und Vertragsbedingungen von Vercel. Soweit Vercel als Auftragsverarbeiter tätig wird und ein Vertrag zur Auftragsverarbeitung erforderlich und verfügbar ist, erfolgt die Verarbeitung auf dieser Grundlage.",
-      "Da Vercel seinen Sitz in den USA hat, kann es zu einer Übermittlung personenbezogener Daten in ein Drittland kommen. Diese erfolgt auf Grundlage der EU-Standardvertragsklauseln sowie, soweit einschlägig, einer Zertifizierung nach dem EU-U.S. Data Privacy Framework.",
+      "Da Vercel seinen Sitz in den USA hat, kann es zu einer Übermittlung personenbezogener Daten in ein Drittland kommen. Vercel Inc. ist nach dem EU-U.S. Data Privacy Framework zertifiziert; die Übermittlung erfolgt auf dieser Grundlage, ergänzend auf Grundlage der EU-Standardvertragsklauseln. Der Zertifizierungsstatus kann über die Liste unter dataprivacyframework.gov eingesehen werden.",
     ],
   },
   {
@@ -38,22 +38,22 @@ const sections: Section[] = [
   {
     heading: "4. Cookies",
     paragraphs: [
-      "Diese Website setzt keine eigenen Cookies und verwendet keine Cookies zu Analyse-, Marketing- oder Wiedererkennungszwecken.",
-      "Wird die Kommentarfunktion geladen, können durch GitHub im Rahmen des eingebundenen Inhalts eigene Cookies gesetzt werden, insbesondere wenn Sie bei GitHub angemeldet sind. Auf diese Verarbeitung hat der Verantwortliche keinen Einfluss.",
+      "Diese Website setzt keine eigenen Cookies und verwendet keine Cookies zu Analyse-, Marketing- oder Wiedererkennungszwecken. Beim bloßen Aufruf der Seiten werden keine Informationen auf Ihrem Endgerät gespeichert oder von dort ausgelesen.",
+      "Nur wenn Sie die Kommentarfunktion durch Klick ausdrücklich laden, können durch giscus und GitHub Einträge im Browserspeicher angelegt und Cookies gesetzt werden, insbesondere wenn Sie bei GitHub angemeldet sind. Einzelheiten finden Sie in Abschnitt 8. Auf diese Verarbeitung hat der Verantwortliche keinen Einfluss.",
     ],
   },
   {
     heading: "5. Vercel Web Analytics",
     paragraphs: [
-      "Diese Website nutzt Vercel Web Analytics zur Reichweitenmessung. Der Dienst arbeitet ohne Cookies und ohne geräteübergreifende Wiedererkennung. Es werden aggregierte Kennzahlen wie Seitenaufrufe, Referrer und ungefähre Herkunftsregion ausgewertet.",
+      "Diese Website nutzt Vercel Web Analytics zur Reichweitenmessung. Der Dienst arbeitet ohne Cookies und ohne geräteübergreifende Wiedererkennung.",
+      "Verarbeitet werden dabei insbesondere die aufgerufene URL beziehungsweise der Pfad, die verweisende Seite (Referrer), gefilterte URL-Parameter, das Herkunftsland, Angaben zu Browser, Gerätetyp und Betriebssystem sowie Zeitstempel. Zur Unterscheidung von Besuchen bildet Vercel aus Anfragedaten einen Hashwert, der nach 24 Stunden verworfen wird. IP-Adressen werden nicht gespeichert.",
       "Es werden keine Profile über einzelne Besucherinnen und Besucher gebildet und keine Daten an Werbenetzwerke weitergegeben. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; das berechtigte Interesse liegt in einer datensparsamen statistischen Auswertung der Websitenutzung.",
-      "Die Auswertung erfolgt ausschließlich in aggregierter Form. Die Speicherdauer der Statistikdaten richtet sich nach den Vorgaben des Anbieters für den genutzten Tarif; eine Zuordnung zu einzelnen Personen erfolgt nicht.",
     ],
   },
   {
     heading: "6. Vercel Speed Insights",
     paragraphs: [
-      "Zur Messung der technischen Performance wird Vercel Speed Insights eingesetzt. Erfasst werden Messwerte zur Ladegeschwindigkeit und Darstellungsqualität (Core Web Vitals). Auch dieser Dienst arbeitet ohne Cookies und ohne Profilbildung.",
+      "Zur Messung der technischen Performance wird Vercel Speed Insights eingesetzt. Erfasst werden Messwerte zur Ladegeschwindigkeit und Darstellungsqualität (Core Web Vitals) sowie ergänzend die aufgerufene URL und Route, Angaben zur Verbindungsgeschwindigkeit, Browser, Gerätetyp und Betriebssystem, das Herkunftsland, Angaben zum auslösenden Seitenelement, Informationen zum eingesetzten SDK und Zeitstempel. Auch dieser Dienst arbeitet ohne Cookies und ohne Profilbildung; eine Zuordnung zu einzelnen Personen erfolgt nicht.",
       "Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; das berechtigte Interesse liegt in der technischen Optimierung der Website.",
     ],
   },
@@ -61,9 +61,8 @@ const sections: Section[] = [
     heading: "7. Aufrufzähler für Blogbeiträge",
     paragraphs: [
       "Soweit auf Blogbeiträgen die Anzahl der Aufrufe angezeigt wird, wird ausschließlich eine Zahl pro Beitrag in einer Redis-Datenbank bei der Upstash, Inc. (USA) gespeichert. Es werden keine IP-Adressen, keine Kennungen und keine sonstigen personenbezogenen Daten gespeichert.",
-      "Der Zählerstand selbst enthält keine personenbezogenen Daten und wird dauerhaft gespeichert. Soweit im Rahmen des Betriebs der Datenbank personenbezogene Daten in die USA übermittelt werden, erfolgt dies auf Grundlage der EU-Standardvertragsklauseln.",
-      "Um Mehrfachzählungen zu vermeiden, wird im Session Storage des verwendeten Browsers ein technischer Merker gesetzt. Dieser enthält keine personenbezogenen Daten, verlässt das Endgerät nicht und wird beim Schließen des Browser-Tabs automatisch gelöscht.",
-      "Der Zugriff auf den Session Storage erfolgt ausschließlich zur technisch notwendigen Vermeidung unmittelbarer Mehrfachzählungen und auf Grundlage von § 25 Abs. 2 Nr. 2 TDDDG.",
+      "Es werden keine Informationen auf Ihrem Endgerät gespeichert oder von dort ausgelesen. Gezählt werden Seitenaufrufe, nicht einzelne Personen; der angezeigte Wert ist daher nur ein Näherungswert.",
+      "Der Zählerstand selbst enthält keine personenbezogenen Daten und wird dauerhaft gespeichert. Upstash, Inc. ist nach dem EU-U.S. Data Privacy Framework zertifiziert; soweit im Rahmen des Betriebs der Datenbank personenbezogene Daten in die USA übermittelt werden, erfolgt dies auf dieser Grundlage, ergänzend auf Grundlage der EU-Standardvertragsklauseln.",
       "Rechtsgrundlage für die Speicherung des Zählerstands ist Art. 6 Abs. 1 lit. f DSGVO.",
     ],
   },
@@ -71,10 +70,11 @@ const sections: Section[] = [
     heading: "8. Kommentarfunktion (giscus / GitHub)",
     paragraphs: [
       "Soweit unter Blogbeiträgen die Kommentarfunktion giscus eingebunden ist, werden Kommentare nicht auf dieser Website, sondern als GitHub Discussions im zugehörigen öffentlichen Repository gespeichert. Anbieter ist die GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA, ein Unternehmen der Microsoft Corporation.",
-      "Beim Laden der Kommentarfunktion baut der Browser eine Verbindung zu giscus.app und zu GitHub auf. Dabei wird die IP-Adresse an diese Anbieter übertragen. Das Laden erfolgt verzögert, sobald der Kommentarbereich in Sichtweite kommt.",
+      "Die Kommentarfunktion wird nicht automatisch geladen. Unter dem Beitrag wird zunächst nur ein Hinweis mit einer Schaltfläche angezeigt. Erst wenn Sie diese Schaltfläche aktiv anklicken, wird das Skript von giscus.app nachgeladen und eine Verbindung zu giscus.app und GitHub aufgebaut. Dabei wird Ihre IP-Adresse an diese Anbieter übertragen.",
+      "Nach dem Laden speichert giscus im lokalen Speicher (Local Storage) Ihres Browsers einen Eintrag zur Sitzungsverwaltung; nach einer Anmeldung bei GitHub wird dort zusätzlich eine Sitzungskennung abgelegt. Diese Speicherung erfolgt ausschließlich aufgrund Ihrer vorherigen Einwilligung nach § 25 Abs. 1 TDDDG. Sie können die Kommentarfunktion jederzeit ungenutzt lassen; ohne Klick werden keine Daten an giscus oder GitHub übertragen.",
       "Zum Verfassen eines Kommentars ist ein GitHub-Konto und eine Anmeldung bei GitHub erforderlich. Es gelten insoweit die Datenschutzbestimmungen von GitHub. Veröffentlichte Kommentare sind öffentlich einsehbar und mit dem GitHub-Benutzernamen verknüpft. Die Speicherdauer richtet sich nach den Vorgaben von GitHub; Kommentare bleiben grundsätzlich so lange gespeichert, bis sie gelöscht werden.",
-      "Die Übermittlung personenbezogener Daten an GitHub in die USA erfolgt auf Grundlage der EU-Standardvertragsklauseln sowie, soweit einschlägig, einer Zertifizierung nach dem EU-U.S. Data Privacy Framework.",
-      "Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; das berechtigte Interesse liegt in der Möglichkeit, Rückmeldungen zu Beiträgen zu erhalten, ohne selbst personenbezogene Daten zu speichern.",
+      "GitHub, Inc. ist nach dem EU-U.S. Data Privacy Framework zertifiziert; die Übermittlung personenbezogener Daten in die USA erfolgt auf dieser Grundlage, ergänzend auf Grundlage der EU-Standardvertragsklauseln.",
+      "Rechtsgrundlage für das Laden der Kommentarfunktion und die damit verbundene Speicherung im Browser ist Ihre Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO in Verbindung mit § 25 Abs. 1 TDDDG. Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, indem Sie die Kommentarfunktion nicht mehr laden und die von giscus gesetzten Einträge in den Browsereinstellungen löschen.",
       "Weitere Informationen finden sich in den Datenschutzbestimmungen von GitHub sowie in den Informationen des Dienstes giscus.",
     ],
   },
@@ -124,7 +124,10 @@ const sections: Section[] = [
 
 export default function DatenschutzPage() {
   return (
-    <main className="mx-auto min-h-screen w-full max-w-3xl px-6 py-12 sm:py-16">
+    <main
+      lang="de"
+      className="mx-auto min-h-screen w-full max-w-3xl px-6 py-12 sm:py-16"
+    >
       <h1 className="text-2xl font-semibold tracking-tight">Datenschutzerklärung</h1>
 
       <div className="mt-10 space-y-10">

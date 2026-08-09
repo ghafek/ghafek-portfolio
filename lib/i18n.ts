@@ -32,6 +32,10 @@ export const ui: Record<
     views: string;
     contents: string;
     comments: string;
+    blogTitle: string;
+    commentsNotice: string;
+    commentsLoad: string;
+    commentsGitHub: string;
   }
 > = {
   en: {
@@ -50,6 +54,11 @@ export const ui: Record<
     views: "views",
     contents: "Contents",
     comments: "Comments",
+    blogTitle: "Blog",
+    commentsNotice:
+      "Comments are provided by giscus and stored as GitHub Discussions. Loading them contacts giscus.app and GitHub, which transmits your IP address to those services and may store data in your browser. Nothing is loaded until you choose to.",
+    commentsLoad: "Load comments",
+    commentsGitHub: "or open the discussions on GitHub",
   },
   de: {
     tagline: "Notizen zu Backend-Entwicklung, Infrastruktur und Studium.",
@@ -67,6 +76,11 @@ export const ui: Record<
     views: "Aufrufe",
     contents: "Inhalt",
     comments: "Kommentare",
+    blogTitle: "Blog",
+    commentsNotice:
+      "Die Kommentare werden über giscus bereitgestellt und als GitHub Discussions gespeichert. Beim Laden wird eine Verbindung zu giscus.app und GitHub hergestellt; dabei wird Ihre IP-Adresse an diese Dienste übertragen und es können Daten in Ihrem Browser gespeichert werden. Vorher wird nichts geladen.",
+    commentsLoad: "Kommentare laden",
+    commentsGitHub: "oder die Diskussionen auf GitHub öffnen",
   },
   ar: {
     tagline: "ملاحظات عن هندسة البرمجيات والبنية التحتية والدراسة.",
@@ -84,5 +98,10 @@ export const ui: Record<
     views: "المشاهدات",
     contents: "المحتويات",
     comments: "التعليقات",
+    blogTitle: "المدونة",
+    commentsNotice:
+      "يتم توفير التعليقات عبر giscus وتُحفظ في GitHub Discussions. عند التحميل يتم الاتصال بـ giscus.app وGitHub، ويُرسل عنوان IP الخاص بك إلى هاتين الخدمتين، وقد تُخزَّن بيانات في متصفحك. لا يتم تحميل أي شيء قبل ذلك.",
+    commentsLoad: "تحميل التعليقات",
+    commentsGitHub: "أو افتح النقاشات على GitHub",
   },
 };

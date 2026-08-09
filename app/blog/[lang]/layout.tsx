@@ -8,10 +8,15 @@ const bitter = Bitter({
   variable: "--font-blog",
 });
 
+// Not preloaded: the English and German sections never render Arabic glyphs,
+// and preloading would cost them ~94 KB of font they never use.
 const notoNaskhArabic = Noto_Naskh_Arabic({
   subsets: ["arabic"],
   variable: "--font-blog-arabic",
+  preload: false,
 });
+
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
