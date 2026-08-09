@@ -22,8 +22,8 @@ const sections: Section[] = [
   {
     heading: "2. Hosting",
     paragraphs: [
-      "Diese Website wird bei der Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA, gehostet. Beim Aufruf der Website verarbeitet Vercel technisch notwendige Daten, insbesondere die IP-Adresse der aufrufenden Geräte.",
-      "Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Das berechtigte Interesse liegt in einer sicheren, stabilen und effizienten Bereitstellung der Website. Mit Vercel besteht ein Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO.",
+      "Diese Website wird bei der Vercel Inc., USA, gehostet. Beim Aufruf der Website verarbeitet Vercel technisch notwendige Daten, insbesondere die IP-Adresse der aufrufenden Geräte.",
+      "Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Das berechtigte Interesse liegt in einer sicheren, stabilen und effizienten Bereitstellung der Website. Die Verarbeitung erfolgt auf Grundlage der Datenschutz- und Vertragsbedingungen von Vercel. Soweit Vercel als Auftragsverarbeiter tätig wird und ein Vertrag zur Auftragsverarbeitung erforderlich und verfügbar ist, erfolgt die Verarbeitung auf dieser Grundlage.",
       "Da Vercel seinen Sitz in den USA hat, kann es zu einer Übermittlung personenbezogener Daten in ein Drittland kommen. Diese erfolgt auf Grundlage der EU-Standardvertragsklauseln sowie, soweit einschlägig, einer Zertifizierung nach dem EU-U.S. Data Privacy Framework.",
     ],
   },
@@ -51,18 +51,20 @@ const sections: Section[] = [
   {
     heading: "6. Aufrufzähler für Blogbeiträge",
     paragraphs: [
-      "Auf Blogbeiträgen wird die Anzahl der Aufrufe angezeigt. Gespeichert wird ausschließlich eine Zahl pro Beitrag in einer Redis-Datenbank bei der Upstash, Inc. (USA). Es werden keine IP-Adressen, keine Kennungen und keine sonstigen personenbezogenen Daten gespeichert.",
+      "Soweit auf Blogbeiträgen die Anzahl der Aufrufe angezeigt wird, wird ausschließlich eine Zahl pro Beitrag in einer Redis-Datenbank bei der Upstash, Inc. gespeichert. Es werden keine IP-Adressen, keine Kennungen und keine sonstigen personenbezogenen Daten gespeichert.",
       "Um Mehrfachzählungen zu vermeiden, wird im Session Storage des verwendeten Browsers ein technischer Merker gesetzt. Dieser enthält keine personenbezogenen Daten, verlässt das Endgerät nicht und wird beim Schließen des Browser-Tabs automatisch gelöscht.",
-      "Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.",
+      "Der Zugriff auf den Session Storage erfolgt ausschließlich zur technisch notwendigen Vermeidung unmittelbarer Mehrfachzählungen und auf Grundlage von § 25 Abs. 2 Nr. 2 TDDDG.",
+      "Rechtsgrundlage für die Speicherung des Zählerstands ist Art. 6 Abs. 1 lit. f DSGVO.",
     ],
   },
   {
     heading: "7. Kommentarfunktion (giscus / GitHub)",
     paragraphs: [
-      "Unter Blogbeiträgen ist die Kommentarfunktion giscus eingebunden. Kommentare werden nicht auf dieser Website, sondern als GitHub Discussions im zugehörigen öffentlichen Repository gespeichert. Anbieter ist die GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA, ein Unternehmen der Microsoft Corporation.",
+      "Soweit unter Blogbeiträgen die Kommentarfunktion giscus eingebunden ist, werden Kommentare nicht auf dieser Website, sondern als GitHub Discussions im zugehörigen öffentlichen Repository gespeichert. Anbieter ist die GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA, ein Unternehmen der Microsoft Corporation.",
       "Beim Laden der Kommentarfunktion baut der Browser eine Verbindung zu giscus.app und zu GitHub auf. Dabei wird die IP-Adresse an diese Anbieter übertragen. Das Laden erfolgt verzögert, sobald der Kommentarbereich in Sichtweite kommt.",
       "Zum Verfassen eines Kommentars ist ein GitHub-Konto und eine Anmeldung bei GitHub erforderlich. Es gelten insoweit die Datenschutzbestimmungen von GitHub. Veröffentlichte Kommentare sind öffentlich einsehbar und mit dem GitHub-Benutzernamen verknüpft.",
       "Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; das berechtigte Interesse liegt in der Möglichkeit, Rückmeldungen zu Beiträgen zu erhalten, ohne selbst personenbezogene Daten zu speichern.",
+      "Weitere Informationen finden sich in den Datenschutzbestimmungen von GitHub sowie in den Informationen des Dienstes giscus.",
     ],
   },
   {
@@ -75,6 +77,7 @@ const sections: Section[] = [
     heading: "9. Kontaktaufnahme per E-Mail",
     paragraphs: [
       "Diese Website enthält kein Kontaktformular. Bei einer Kontaktaufnahme per E-Mail werden die übermittelten Daten ausschließlich zur Bearbeitung der Anfrage verarbeitet und nach abschließender Bearbeitung gelöscht, soweit keine gesetzlichen Aufbewahrungspflichten entgegenstehen.",
+      "Die E-Mail-Kommunikation über die Adresse alsaho@ghafek.xyz erfolgt über iCloud Mail. Anbieter ist die Apple Distribution International Ltd., Hollyhill Industrial Estate, Hollyhill, Cork, Irland. Dabei können personenbezogene Daten wie E-Mail-Adresse, Inhalt der Nachricht, technische Metadaten und Zeitpunkte der Kommunikation verarbeitet werden.",
       "Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO beziehungsweise, bei Anbahnung eines Vertrags- oder Beschäftigungsverhältnisses, Art. 6 Abs. 1 lit. b DSGVO.",
     ],
   },
