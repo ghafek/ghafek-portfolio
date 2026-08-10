@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Logo from "@/app/components/logo";
-import { about, navItems } from "@/lib/content";
+import ThemeToggle from "@/app/components/theme-toggle";
+import { about, contact, muted, navItems } from "@/lib/content";
 
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -10,23 +11,48 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
           <Logo className="h-6 w-auto" />
           <span>{about.name}</span>
         </Link>
-        <nav className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+          <nav className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+            {navItems.map((item) => (
+              <Link key={item.href} className="hover:underline" href={item.href}>
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+          <ThemeToggle label="Switch between light and dark theme" />
+        </div>
+      </header>
+
+      <main className="mt-16">{children}</main>
+
+      <footer className="mt-24 space-y-4 border-t border-neutral-300 pt-8 text-center text-sm dark:border-neutral-700">
+        <nav className="flex flex-wrap justify-center gap-x-5 gap-y-2">
           {navItems.map((item) => (
             <Link key={item.href} className="hover:underline" href={item.href}>
               {item.label}
             </Link>
           ))}
         </nav>
-      </header>
 
-      <main className="mt-16">{children}</main>
+        <nav className={`flex flex-wrap justify-center gap-x-5 gap-y-2 ${muted}`}>
+          {contact.links.map((link) => (
+            <a
+              key={link.href}
+              className="hover:underline"
+              href={link.href}
+              {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
 
-      <footer className="mt-16 border-t border-neutral-300 pt-6 text-sm dark:border-neutral-700">
-        <div className="flex flex-wrap gap-x-6 gap-y-2">
-          <Link className="underline" href="/impressum">
+        <div className={`flex flex-wrap items-center justify-center gap-x-5 gap-y-2 ${muted}`}>
+          <span>© {new Date().getFullYear()} {about.name}</span>
+          <Link className="hover:underline" href="/impressum">
             Impressum
           </Link>
-          <Link className="underline" href="/datenschutz">
+          <Link className="hover:underline" href="/datenschutz">
             Datenschutz
           </Link>
         </div>

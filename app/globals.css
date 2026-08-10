@@ -1,20 +1,25 @@
 @import "tailwindcss";
 
-:root {
+/* An inline script in the root layout resolves the theme to a concrete
+   data-theme value before first paint, so both the colour variables and the
+   dark: utilities key off the attribute rather than the media query. That is
+   what lets the manual toggle override the system setting. */
+@custom-variant dark ([data-theme="dark"] &);
+
+:root,
+:root[data-theme="light"] {
   --background: #ffffff;
   --foreground: #171717;
+}
+
+:root[data-theme="dark"] {
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 /* System font stacks matching the reference site: Optima and Iowan Old Style

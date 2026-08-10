@@ -33,6 +33,11 @@ export const metadata: Metadata = {
   },
 };
 
+// Runs before first paint: applies the stored choice, or the system setting
+// when there is none, so the page never flashes the wrong theme. Kept inline
+// and dependency-free because anything async would paint first.
+const themeScript = `(function(){try{var t=localStorage.getItem("theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t}catch(e){}})();`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -41,10 +46,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-theme="light"
       data-scroll-behavior="smooth"
       className="h-full scroll-smooth antialiased"
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         {children}
         <Analytics />
         <SpeedInsights />

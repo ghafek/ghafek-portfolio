@@ -38,7 +38,8 @@ const sections: Section[] = [
   {
     heading: "4. Cookies",
     paragraphs: [
-      "This website sets no cookies of its own and uses no cookies for analytics, marketing or recognition purposes. None of the features used on these pages store information in your browser storage or read information already stored there.",
+      "This website sets no cookies of its own and uses no cookies for analytics, marketing or recognition purposes.",
+      "If you use the light and dark theme switch, your choice is saved in your browser's local storage under the name \"theme\", so that the site can present the same setting on your next visit. This entry contains no personal data, is never transmitted anywhere, and is written only when you operate the switch yourself. It is stored on the basis of Sec. 25(2) no. 2 TDDDG, as it is strictly necessary to provide the display setting you explicitly requested. You can delete it at any time in your browser settings.",
       "Only if you explicitly load the comment function by clicking may giscus and GitHub create entries in your browser storage and set cookies, in particular if you are signed in to GitHub. Details are set out in section 8. The controller has no influence over that processing.",
     ],
   },

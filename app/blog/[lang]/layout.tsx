@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Bitter, Noto_Naskh_Arabic } from "next/font/google";
 import { notFound } from "next/navigation";
 import Logo from "@/app/components/logo";
+import ThemeToggle from "@/app/components/theme-toggle";
 import { isLocale, localeMeta, locales, ui } from "@/lib/i18n";
 
 const bitter = Bitter({
@@ -71,7 +72,8 @@ export default async function BlogLayout({
                 github
               </a>
             )}
-            <span className="ms-auto flex gap-3">
+            <span className="ms-auto flex items-center gap-3">
+              <ThemeToggle label={t.themeToggle} />
               {locales.map((locale) =>
                 locale === lang ? (
                   <span key={locale} className="font-bold">
