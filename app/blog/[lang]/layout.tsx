@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Bitter, Noto_Naskh_Arabic } from "next/font/google";
 import { notFound } from "next/navigation";
+import Logo from "@/app/components/logo";
 import { isLocale, localeMeta, locales, ui } from "@/lib/i18n";
 
 const bitter = Bitter({
@@ -45,7 +46,10 @@ export default async function BlogLayout({
       <div className="mx-auto min-h-screen w-full max-w-3xl px-6 py-12 sm:py-16">
         <header className="space-y-2 border-b border-neutral-300 pb-6 dark:border-neutral-700">
           <p className="text-2xl font-bold tracking-tight">
-            <Link href={`/blog/${lang}`}>Ghafek Alsaho</Link>
+            <Link className="inline-flex items-center gap-2" href={`/blog/${lang}`}>
+              <Logo className="h-8 w-auto" />
+              <span>Ghafek Alsaho</span>
+            </Link>
           </p>
           {lang !== "ar" && (
             <p className="text-sm text-neutral-600 dark:text-neutral-400">{t.tagline}</p>

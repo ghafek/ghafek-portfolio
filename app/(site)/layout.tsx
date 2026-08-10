@@ -1,16 +1,23 @@
 import Link from "next/link";
-import { navItems } from "@/lib/content";
+import Logo from "@/app/components/logo";
+import { about, navItems } from "@/lib/content";
 
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="mx-auto w-full max-w-3xl px-6 py-12 sm:py-16">
-      <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
-        {navItems.map((item) => (
-          <Link key={item.href} className="hover:underline" href={item.href}>
-            {item.label}
-          </Link>
-        ))}
-      </nav>
+      <header className="flex flex-wrap items-center justify-between gap-x-6 gap-y-4">
+        <Link href="/" className="flex items-center gap-2 font-semibold">
+          <Logo className="h-6 w-auto" />
+          <span>{about.name}</span>
+        </Link>
+        <nav className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+          {navItems.map((item) => (
+            <Link key={item.href} className="hover:underline" href={item.href}>
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+      </header>
 
       <main className="mt-16">{children}</main>
 
