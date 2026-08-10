@@ -26,14 +26,6 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
       <main className="mt-16">{children}</main>
 
       <footer className="mt-24 space-y-4 border-t border-neutral-300 pt-8 text-center text-sm dark:border-neutral-700">
-        <nav className="flex flex-wrap justify-center gap-x-5 gap-y-2">
-          {navItems.map((item) => (
-            <Link key={item.href} className="hover:underline" href={item.href}>
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-
         <nav className={`flex flex-wrap justify-center gap-x-5 gap-y-2 ${muted}`}>
           {contact.links.map((link) => (
             <a
