@@ -3,10 +3,11 @@
 export const muted = "text-neutral-600 dark:text-neutral-400";
 
 export const about = {
+  // Full name is still used in the site headers and metadata.
   name: "Ghafek Alsaho",
-  headline:
-    "Computer Science student at Technische Universität Berlin · Certified Computer Science Expert – Software Development",
-  location: "Berlin, Germany",
+  greeting: "Hey, I'm Ghafek",
+  intro:
+    "Computer Science student at Technische Universität Berlin, Certified Computer Science Expert – Software Development. Based in Berlin, Germany.",
   summary:
     "I work on technical service and automation: API integrations, CI/CD pipelines, Kubernetes and logging infrastructure, certificate handling, and documentation-as-code. My studies and open-source work focus on large-scale data systems.",
   spokenLanguages: "Spoken languages: German (C2) · English (C1) · Arabic (native)",
