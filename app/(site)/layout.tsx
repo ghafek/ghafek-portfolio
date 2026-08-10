@@ -42,10 +42,10 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
         <div className={`flex flex-wrap items-center justify-center gap-x-5 gap-y-2 ${muted}`}>
           <span>© {about.name}</span>
           <Link className="hover:underline" href="/impressum">
-            Impressum
+            Legal notice
           </Link>
           <Link className="hover:underline" href="/datenschutz">
-            Datenschutz
+            Privacy policy
           </Link>
         </div>
       </footer>

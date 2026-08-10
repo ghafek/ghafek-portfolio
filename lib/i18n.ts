@@ -39,6 +39,8 @@ export const ui: Record<
     commentsGitHub: string;
     commentsPrivacy: string;
     themeToggle: string;
+    legalNotice: string;
+    privacyPolicy: string;
   }
 > = {
   en: {
@@ -65,6 +67,8 @@ export const ui: Record<
     commentsGitHub: "or open the discussions on GitHub",
     commentsPrivacy: "privacy policy",
     themeToggle: "Switch between light and dark theme",
+    legalNotice: "Legal notice",
+    privacyPolicy: "Privacy policy",
   },
   de: {
     tagline: "Notizen zu Backend-Entwicklung, Infrastruktur und Studium.",
@@ -90,6 +94,8 @@ export const ui: Record<
     commentsGitHub: "oder die Diskussionen auf GitHub öffnen",
     commentsPrivacy: "Datenschutzerklärung",
     themeToggle: "Zwischen hellem und dunklem Design wechseln",
+    legalNotice: "Impressum",
+    privacyPolicy: "Datenschutz",
   },
   ar: {
     tagline: "ملاحظات عن هندسة البرمجيات والبنية التحتية والدراسة.",
@@ -115,5 +121,7 @@ export const ui: Record<
     commentsGitHub: "أو افتح النقاشات على GitHub",
     commentsPrivacy: "سياسة الخصوصية",
     themeToggle: "التبديل بين الوضع الفاتح والداكن",
+    legalNotice: "بيان قانوني",
+    privacyPolicy: "سياسة الخصوصية",
   },
 };

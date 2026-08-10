@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Datenschutz | Ghafek Alsaho",
+  title: "Privacy policy | Ghafek Alsaho",
   description: "Privacy policy for this website.",
 };
 
@@ -127,7 +127,7 @@ const sections: Section[] = [
 export default function DatenschutzPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-3xl px-6 py-12 sm:py-16">
-      <h1 className="text-2xl font-semibold tracking-tight">Datenschutz (privacy policy)</h1>
+      <h1 className="text-2xl font-semibold tracking-tight">Privacy policy (Datenschutz)</h1>
 
       <div className="mt-10 space-y-10">
         {sections.map((section) => (
