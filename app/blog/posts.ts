@@ -1,4 +1,4 @@
-import { localeMeta, type Locale } from "@/lib/i18n";
+import { type Locale } from "@/lib/i18n";
 
 export type PostSection = {
   heading: string;
@@ -109,27 +109,6 @@ export function readingMinutes(post: Post): number {
   return Math.max(1, Math.round(words / 200));
 }
 
-export function formatDayMonth(iso: string, locale: Locale): string {
-  return new Intl.DateTimeFormat(localeMeta[locale].intl, {
-    day: "2-digit",
-    month: "short",
-  }).format(new Date(iso));
-}
 
-export function formatFullDate(iso: string, locale: Locale): string {
-  return new Intl.DateTimeFormat(localeMeta[locale].intl, {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  }).format(new Date(iso));
-}
 
-export function formatYear(iso: string, locale: Locale): string {
-  return new Intl.DateTimeFormat(localeMeta[locale].intl, { year: "numeric" }).format(
-    new Date(iso),
-  );
-}
 
-export function yearKey(iso: string): string {
-  return iso.slice(0, 4);
-}

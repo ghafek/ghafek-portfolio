@@ -5,7 +5,6 @@ import GiscusComments from "@/app/components/giscus-comments";
 import ViewCounter from "@/app/components/view-counter";
 import { isLocale, locales, ui, type Locale } from "@/lib/i18n";
 import {
-  formatFullDate,
   getPostByPath,
   postPath,
   postsByLocale,
@@ -75,7 +74,7 @@ export default async function BlogPostPage({ params }: Props) {
               {t.author}: {t.authorName}
             </li>
             <li>
-              {t.date}: {formatFullDate(post.date, locale)}
+              {t.date}: {post.date}
             </li>
             <li>
               {t.category}: {post.category}
