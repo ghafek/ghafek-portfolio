@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 // IDs generated at https://giscus.app for the public ghafek-portfolio repo
@@ -25,7 +24,6 @@ export default function GiscusComments({
   loadLabel,
   unloadLabel,
   gitHubLabel,
-  privacyLabel,
 }: {
   lang: string;
   heading: string;
@@ -33,7 +31,6 @@ export default function GiscusComments({
   loadLabel: string;
   unloadLabel: string;
   gitHubLabel: string;
-  privacyLabel: string;
 }) {
   const [accepted, setAccepted] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -100,7 +97,7 @@ export default function GiscusComments({
           >
             {loadLabel}
           </button>
-          <p className="space-x-3 text-sm">
+          <p className="text-sm">
             <a
               className="underline"
               href={giscusConfig.discussionsUrl}
@@ -109,9 +106,6 @@ export default function GiscusComments({
             >
               {gitHubLabel}
             </a>
-            <Link className="underline" href="/datenschutz">
-              {privacyLabel}
-            </Link>
           </p>
         </div>
       )}

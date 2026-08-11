@@ -37,7 +37,6 @@ export const ui: Record<
     commentsLoad: string;
     commentsUnload: string;
     commentsGitHub: string;
-    commentsPrivacy: string;
     themeToggle: string;
     legalNotice: string;
     privacyPolicy: string;
@@ -65,7 +64,6 @@ export const ui: Record<
     commentsLoad: "Load comments",
     commentsUnload: "Unload comments and withdraw consent",
     commentsGitHub: "or open the discussions on GitHub",
-    commentsPrivacy: "privacy policy",
     themeToggle: "Switch between light and dark theme",
     legalNotice: "Legal notice",
     privacyPolicy: "Privacy policy",
@@ -92,7 +90,6 @@ export const ui: Record<
     commentsLoad: "Kommentare laden",
     commentsUnload: "Kommentare entladen und Einwilligung widerrufen",
     commentsGitHub: "oder die Diskussionen auf GitHub öffnen",
-    commentsPrivacy: "Datenschutzerklärung",
     themeToggle: "Zwischen hellem und dunklem Design wechseln",
     legalNotice: "Impressum",
     privacyPolicy: "Datenschutz",
@@ -119,7 +116,6 @@ export const ui: Record<
     commentsLoad: "تحميل التعليقات",
     commentsUnload: "إلغاء تحميل التعليقات وسحب الموافقة",
     commentsGitHub: "أو افتح النقاشات على GitHub",
-    commentsPrivacy: "سياسة الخصوصية",
     themeToggle: "التبديل بين الوضع الفاتح والداكن",
     legalNotice: "بيان قانوني",
     privacyPolicy: "سياسة الخصوصية",
