@@ -1,7 +1,10 @@
 "use client";
 
-// Which icon shows is decided by CSS from the data-theme attribute, not by
-// React state, so the button renders correctly on the server and never
+// The icon shows the theme the button switches *to*, not the current one:
+// a sun while dark is active, a moon while light is active.
+//
+// Which one is visible is decided by CSS from the data-theme attribute rather
+// than React state, so the button renders correctly on the server and never
 // flickers or mismatches during hydration.
 export default function ThemeToggle({ label }: { label: string }) {
   function toggle() {
@@ -24,7 +27,7 @@ export default function ThemeToggle({ label }: { label: string }) {
       className="text-neutral-600 transition-colors hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
     >
       <svg
-        className="block h-5 w-5 dark:hidden"
+        className="hidden h-5 w-5 dark:block"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -36,7 +39,7 @@ export default function ThemeToggle({ label }: { label: string }) {
         <path d="M12 2v2M12 20v2M4.9 4.9l1.5 1.5M17.6 17.6l1.5 1.5M2 12h2M20 12h2M4.9 19.1l1.5-1.5M17.6 6.4l1.5-1.5" />
       </svg>
       <svg
-        className="hidden h-5 w-5 dark:block"
+        className="block h-5 w-5 dark:hidden"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
