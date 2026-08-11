@@ -40,7 +40,9 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
         </nav>
 
         <div className={`flex flex-wrap items-center justify-center gap-x-5 gap-y-2 ${muted}`}>
-          <span>© {about.name}</span>
+          <span>
+            © {new Date().getFullYear()} {about.name}. Built in Berlin.
+          </span>
           <Link className="hover:underline" href="/impressum">
             Legal notice
           </Link>

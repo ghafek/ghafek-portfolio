@@ -1,4 +1,4 @@
-import { about, contact, muted } from "@/lib/content";
+import { contact, muted } from "@/lib/content";
 
 export const metadata = {
   title: "Contact | Ghafek Alsaho",
@@ -9,12 +9,8 @@ export default function ContactPage() {
   return (
     <section className="space-y-4">
       <h1 className="text-2xl font-semibold tracking-tight">Contact</h1>
-      <p className="leading-relaxed">{contact.availability}</p>
-      <p className={`leading-relaxed ${muted}`}>
-        Looking for roles in {contact.lookingFor.join(", ")}.
-      </p>
-      <p className={`leading-relaxed ${muted}`}>{about.spokenLanguages}</p>
-      <ul className="space-y-1">
+      <p className="leading-relaxed">{contact.primaryInterest}</p>
+      <p className={`leading-relaxed ${muted}`}>{contact.alsoOpenTo}</p>      <ul className="space-y-1">
         {contact.links.map((link) => (
           <li key={link.href}>
             {link.label}:{" "}

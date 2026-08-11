@@ -10,7 +10,6 @@ export const about = {
     "Computer Science student at Technische Universität Berlin, Certified Computer Science Expert – Software Development. Based in Berlin, Germany.",
   summary:
     "I work on technical service and automation: API integrations, CI/CD pipelines, Kubernetes and logging infrastructure, certificate handling, and documentation-as-code. My studies and open-source work focus on large-scale data systems.",
-  spokenLanguages: "Spoken languages: German (C2) · English (C1) · Arabic (native)",
 };
 
 export const skillGroups = [
@@ -167,15 +166,10 @@ export const education = [
 ];
 
 export const contact = {
-  availability: "Available from October 2026.",
-  lookingFor: [
-    "technical support / application support",
-    "platform or DevOps support",
-    "integration and API engineering",
-    "automation engineering",
-    "junior-to-mid backend with operations experience",
-    "developer-documentation / DX roles",
-  ],
+  primaryInterest:
+    "Most interested in data engineering and data platform roles, where my studies and open-source work meet the operational side of my job experience.",
+  alsoOpenTo:
+    "Also open to: integration and API engineering, automation engineering, platform or DevOps support, application support, and junior-to-mid backend roles with an operations component.",
   links: [
     { label: "Email", text: "alsaho@ghafek.xyz", href: "mailto:alsaho@ghafek.xyz", external: false },
     {
