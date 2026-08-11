@@ -8,11 +8,11 @@ export function isLocale(value: string): value is Locale {
 
 export const localeMeta: Record<
   Locale,
-  { label: string; htmlLang: string; dir: "ltr" | "rtl" }
+  { label: string; htmlLang: string; dir: "ltr" | "rtl"; intl: string }
 > = {
-  en: { label: "EN", htmlLang: "en", dir: "ltr" },
-  de: { label: "DE", htmlLang: "de", dir: "ltr" },
-  ar: { label: "عربي", htmlLang: "ar", dir: "rtl" },
+  en: { label: "EN", htmlLang: "en", dir: "ltr", intl: "en-US" },
+  de: { label: "DE", htmlLang: "de", dir: "ltr", intl: "de-DE" },
+  ar: { label: "عربي", htmlLang: "ar", dir: "rtl", intl: "ar" },
 };
 
 export const ui: Record<

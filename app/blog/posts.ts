@@ -1,4 +1,4 @@
-import { type Locale } from "@/lib/i18n";
+import { localeMeta, type Locale } from "@/lib/i18n";
 
 export type PostSection = {
   heading: string;
@@ -89,6 +89,15 @@ export function postPath(post: Post): string {
 
 export function getPostByPath(locale: Locale, path: string): Post | undefined {
   return postsByLocale[locale].find((post) => postPath(post) === path);
+}
+
+// Compact day and month for the blog index, where the year heading already
+// supplies the year. Post pages show the full ISO date instead.
+export function formatDayMonth(iso: string, locale: Locale): string {
+  return new Intl.DateTimeFormat(localeMeta[locale].intl, {
+    day: "2-digit",
+    month: "short",
+  }).format(new Date(iso));
 }
 
 // Unicode-aware so Arabic and German headings produce usable anchors.

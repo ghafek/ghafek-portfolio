@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { isLocale, localeMeta, ui, type Locale } from "@/lib/i18n";
-import { getPosts, postPath, type Post } from "../posts";
+import { formatDayMonth, getPosts, postPath, type Post } from "../posts";
 
 type Props = {
   params: Promise<{ lang: string }>;
@@ -53,10 +53,10 @@ export default async function BlogIndexPage({ params }: Props) {
             {posts.map((post) => (
               <li
                 key={post.slug}
-                className="grid grid-cols-[7rem_1fr] items-baseline gap-x-4 gap-y-1 sm:grid-cols-[7rem_1fr_auto] sm:gap-x-6"
+                className="grid grid-cols-[6rem_1fr] items-baseline gap-x-4 gap-y-1 sm:grid-cols-[6rem_1fr_auto] sm:gap-x-6"
               >
                 <span className="text-sm tabular-nums text-neutral-600 dark:text-neutral-400">
-                  {post.date}
+                  {formatDayMonth(post.date, locale)}
                 </span>
                 <Link
                   className="font-semibold leading-relaxed hover:underline"
