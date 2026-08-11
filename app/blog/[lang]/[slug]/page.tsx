@@ -6,7 +6,8 @@ import ViewCounter from "@/app/components/view-counter";
 import { isLocale, locales, ui, type Locale } from "@/lib/i18n";
 import {
   formatFullDate,
-  getPost,
+  getPostByPath,
+  postPath,
   postsByLocale,
   readingMinutes,
   slugifyHeading,
@@ -20,7 +21,7 @@ export const dynamicParams = false;
 
 export function generateStaticParams() {
   return locales.flatMap((lang) =>
-    postsByLocale[lang].map((post) => ({ lang, slug: post.slug })),
+    postsByLocale[lang].map((post) => ({ lang, slug: postPath(post) })),
   );
 }
 
@@ -29,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!isLocale(lang)) {
     return {};
   }
-  const post = getPost(lang, slug);
+  const post = getPostByPath(lang, slug);
   if (!post) {
     return { title: "Post not found | Ghafek Alsaho" };
   }
@@ -40,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: post.title,
       description: post.description,
       type: "article",
-      url: `/blog/${lang}/${post.slug}`,
+      url: `/blog/${lang}/${postPath(post)}`,
     },
   };
 }
@@ -51,7 +52,7 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
   const locale: Locale = lang;
-  const post = getPost(locale, slug);
+  const post = getPostByPath(locale, slug);
   if (!post) {
     notFound();
   }

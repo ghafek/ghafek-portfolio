@@ -80,8 +80,15 @@ export function getPosts(locale: Locale): Post[] {
   return [...postsByLocale[locale]].sort((a, b) => b.date.localeCompare(a.date));
 }
 
-export function getPost(locale: Locale, slug: string): Post | undefined {
-  return postsByLocale[locale].find((post) => post.slug === slug);
+// URL segment: a compact date prefix plus the slug, so posts sort
+// chronologically and the address still says what the post is about. The
+// prefix is derived from `date` rather than stored, so the two cannot drift.
+export function postPath(post: Post): string {
+  return `${post.date.replaceAll("-", "")}-${post.slug}`;
+}
+
+export function getPostByPath(locale: Locale, path: string): Post | undefined {
+  return postsByLocale[locale].find((post) => postPath(post) === path);
 }
 
 // Unicode-aware so Arabic and German headings produce usable anchors.

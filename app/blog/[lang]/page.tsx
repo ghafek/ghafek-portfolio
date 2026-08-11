@@ -2,7 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { isLocale, localeMeta, ui, type Locale } from "@/lib/i18n";
-import { formatDayMonth, formatYear, getPosts, yearKey, type Post } from "../posts";
+import {
+  formatDayMonth,
+  formatYear,
+  getPosts,
+  postPath,
+  yearKey,
+  type Post,
+} from "../posts";
 
 type Props = {
   params: Promise<{ lang: string }>;
@@ -58,7 +65,7 @@ export default async function BlogIndexPage({ params }: Props) {
                 </span>
                 <Link
                   className="font-semibold leading-relaxed hover:underline"
-                  href={`/blog/${locale}/${post.slug}`}
+                  href={`/blog/${locale}/${postPath(post)}`}
                 >
                   {post.title}
                 </Link>
