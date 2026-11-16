@@ -81,18 +81,8 @@ failing.
 
 ## How this was built
 
-Built with heavy use of an AI coding agent (Claude Code), directed and reviewed
-by me.
+Built with an AI coding agent (Claude Code), which I directed and reviewed.
 
-I made the architecture and content decisions — independent per-language blog
-streams rather than translations, consent-gated comment loading, the
-date-prefixed URL scheme, how the legal pages are handled — and the
-implementation went through an independent review pass before it shipped. That
-review earned its place: it caught a font cascade where Arabic text was silently
-falling back to Times New Roman, and a consent flow that could be granted in one
-click but not withdrawn in one.
+I made the architecture and content decisions: independent per-language blog streams rather than translations, consent-gated comment loading, the date-prefixed URL scheme, and how the legal pages are handled.
 
-I worked this way deliberately. Alongside a bachelor thesis and a working-student
-role, I wanted to see how far a well-directed agent workflow gets on a project
-with real constraints — GDPR, three languages, right-to-left layout, and a public
-deployment I have to stand behind.
+I worked this way on purpose. While writing my bachelor thesis and working at Verimi, I wanted to see how far a well-directed agent workflow gets on a project with real constraints: GDPR, three languages, right-to-left layout, and a public deployment I have to stand behind.
