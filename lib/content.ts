@@ -67,7 +67,7 @@ export const projects = [
     description:
       "Co-developed the initial Star Schema Benchmark implementation for Apache SystemDS with a project partner, as the programming project of TU Berlin's Large-scale Data Engineering module (Big Data Engineering / DAMS Lab): all 13 SSB queries in DML, shell scripts for automated performance runs, and the documentation. It landed on apache/systemds main as commit 20a7b67 in January 2026.",
     href: "https://github.com/apache/systemds/commit/20a7b67419e284ed908ededd19e80cd2713dca5a",
-    linkText: "apache/systemds commit 20a7b674",
+    linkText: "apache/systemds commit 20a7b67",
   },
   {
     title: "This site",
