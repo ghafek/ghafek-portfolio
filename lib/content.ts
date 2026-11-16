@@ -7,7 +7,7 @@ export const about = {
   name: "Ghafek Alsaho",
   greeting: "Hey, I'm Ghafek",
   intro:
-    "Computer Science student at Technische Universität Berlin (thesis graded 1.7, degree expected Sept 2027) with a completed IHK apprenticeship in software development. Based in Berlin; open to work in Berlin or Hamburg, or remote. Available full-time now.",
+    "Computer Science student at Technische Universität Berlin, Certified Computer Science Expert – Software Development. Based in Berlin, Germany.",
   summary:
     "I work on technical service and automation: API integrations, CI/CD pipelines, Kubernetes and logging infrastructure, certificate handling, and documentation-as-code. My studies and open-source work focus on large-scale data systems.",
 };
