@@ -3,7 +3,7 @@ import { muted, skillGroups } from "@/lib/content";
 export const metadata = {
   title: "Tech stack | Ghafek Alsaho",
   description:
-    "Languages, engineering, platform and operations tooling, and university coursework.",
+    "Languages, engineering, platform and operations, automation and data systems tooling.",
 };
 
 export default function TechStackPage() {

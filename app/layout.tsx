@@ -5,9 +5,9 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.ghafek.xyz"),
-  title: "Ghafek Alsaho — CS, Data Engineering & Automation, Berlin",
+  title: "Ghafek Alsaho — Software Development & Automation",
   description:
-    "Computer Science student at Technische Universität Berlin. Technical service and automation, platform operations, API integration, and large-scale data systems.",
+    "Computer Science student at TU Berlin with experience in software development, API integration and automation. Available full-time immediately; Berlin or Hamburg, open to remote.",
   keywords: [
     "Ghafek Alsaho",
     "portfolio",
@@ -19,17 +19,17 @@ export const metadata: Metadata = {
     "Apache SystemDS",
   ],
   openGraph: {
-    title: "Ghafek Alsaho — CS, Data Engineering & Automation, Berlin",
+    title: "Ghafek Alsaho — Software Development & Automation",
     description:
-      "Computer Science student at TU Berlin working on technical service and automation, platform operations, API integration, and large-scale data systems.",
+      "Computer Science student at TU Berlin with experience in software development, API integration and automation. Available full-time immediately; Berlin or Hamburg, open to remote.",
     type: "website",
     url: "https://www.ghafek.xyz",
   },
   twitter: {
     card: "summary",
-    title: "Ghafek Alsaho — CS, Data Engineering & Automation, Berlin",
+    title: "Ghafek Alsaho — Software Development & Automation",
     description:
-      "Computer Science student at TU Berlin working on technical service and automation, platform operations, and large-scale data systems.",
+      "Computer Science student at TU Berlin with experience in software development, API integration and automation. Available full-time immediately; Berlin or Hamburg, open to remote.",
   },
 };
 
